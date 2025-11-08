@@ -6,6 +6,7 @@
   <title>Contact – AL Solutions</title>
   <meta name="description" content="Get in touch with AL Solutions to discuss your AI project and schedule a discovery call." />
   <link rel="stylesheet" href="css/style.css">
+  <script src="js/contact.js" defer></script>
 </head>
 <body>
   <header>
@@ -22,15 +23,39 @@
   <section class="section">
     <h1 class="section-title">Get in Touch</h1>
     <p class="section-description">We’d love to hear about your goals and challenges. Reach out and we’ll schedule a discovery call to explore how operational AI can help you.</p>
-    <div class="contact-container">
-      <p>Email us at:<br>
-        <a href="mailto:asaflavi9@gmail.com">asaflavi9@gmail.com</a>
-      </p>
-      <p>Connect on LinkedIn:<br>
-        <a href="https://www.linkedin.com/in/asaf-lavi-ai/" target="_blank" rel="noopener">linkedin.com/in/asaf-lavi-ai</a>
-      </p>
-      <p>Based in Israel (UTC+2).</p>
-      <a href="mailto:asaflavi9@gmail.com?subject=Discovery%20Call%20Request" class="btn btn-primary">Request a Call</a>
+    <div class="contact-grid">
+      <div class="contact-info">
+        <h2>Start the conversation</h2>
+        <p>Share a bit about your goals and we’ll follow up with next steps for a discovery call or demo. We typically reply within one business day.</p>
+        <div class="contact-detail">
+          <span class="detail-label">LinkedIn</span>
+          <a href="https://www.linkedin.com/in/asaf-lavi-ai/" target="_blank" rel="noopener">linkedin.com/in/asaf-lavi-ai</a>
+        </div>
+        <p class="contact-note">Based in Israel (UTC+2). Happy to coordinate across time zones.</p>
+      </div>
+      <form id="contactForm" class="contact-form">
+        <div class="form-group">
+          <label for="fullName">Full name</label>
+          <input type="text" id="fullName" name="name" autocomplete="name" required>
+        </div>
+        <div class="form-group">
+          <label for="emailAddress">Work email</label>
+          <input type="email" id="emailAddress" name="email" autocomplete="email" required>
+        </div>
+        <div class="form-group">
+          <label for="company">Company</label>
+          <input type="text" id="company" name="company" autocomplete="organization">
+        </div>
+        <div class="form-group">
+          <label for="message">How can we help?</label>
+          <textarea id="message" name="message" rows="5" required></textarea>
+        </div>
+        <input type="hidden" name="_subject" value="New message from the AL Solutions website">
+        <input type="hidden" name="_captcha" value="false">
+        <input type="hidden" name="_template" value="table">
+        <button type="submit" class="btn btn-primary">Send Message</button>
+        <p id="formStatus" class="form-feedback" role="status" aria-live="polite"></p>
+      </form>
     </div>
   </section>
 
