@@ -1,0 +1,12 @@
+{
+  "name": "al-solutions-site",
+  "version": "1.0.0",
+  "description": "AL Solutions marketing site",
+  "scripts": {
+    "test": "jest"
+  },
+  "devDependencies": {
+    "jest": "^29.7.0",
+    "jest-environment-jsdom": "^29.7.0"
+  }
+}
