@@ -103,13 +103,12 @@ a:focus-visible, button:focus-visible, input:focus-visible, textarea:focus-visib
 .brand {
   display: flex;
   align-items: center;
-  gap: 12px;
+  gap: 9px;
   text-decoration: none;
-  direction: ltr; /* wordmark always LTR */
+  direction: ltr; /* wordmark always LTR; the mark supplies the "AL" */
 }
 .brand img { height: 34px; width: auto; }
-.brand .brand-name { font-size: 21px; font-weight: 800; color: var(--white); letter-spacing: .3px; }
-.brand .brand-name b { color: var(--blue); font-weight: 800; }
+.brand .brand-name { font-size: 24px; font-weight: 800; color: var(--white); letter-spacing: .3px; }
 
 .site-nav { display: flex; align-items: center; gap: 4px 18px; flex-wrap: wrap; }
 .site-nav a {
@@ -384,7 +383,7 @@ h2 { font-size: clamp(26px, 4vw, 34px); font-weight: 700; line-height: 1.25; mar
 .footer-links { display: flex; gap: 22px; flex-wrap: wrap; }
 .footer-links a { display: inline-block; padding-block: 10px; } /* 24px+ target size */
 .site-footer .brand img { height: 26px; }
-.site-footer .brand .brand-name { font-size: 16px; }
+.site-footer .brand .brand-name { font-size: 18px; }
 
 /* ---------- Legal / content pages ---------- */
 .page-main { padding-block: 64px; }
