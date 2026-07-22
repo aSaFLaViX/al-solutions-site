@@ -380,6 +380,8 @@ h2 { font-size: clamp(26px, 4vw, 34px); font-weight: 700; line-height: 1.25; mar
 .form-card .btn-primary { background: var(--blue-ink); width: 100%; }
 .form-card .btn-primary:hover { background: #1741B8; }
 .form-note { font-size: 13.5px; color: var(--ink-soft); margin-block-start: 12px; }
+.form-status { font-size: 15px; margin-block-start: 12px; padding: 10px 14px; border-radius: var(--radius-btn); }
+.form-status.is-error { color: #8A1F1F; background: #FDECEC; border: 1px solid #F3C0C0; }
 .form-note a { color: var(--blue-ink); }
 .hp-field { position: absolute; inset-inline-start: -9999px; height: 0; overflow: hidden; }
 
