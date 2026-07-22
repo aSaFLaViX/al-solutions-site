@@ -30,30 +30,36 @@
 <main id="main" class="page-main">
   <div class="container">
     <h1>Accessibility Statement</h1>
-    <p class="updated">Last updated: July 21, 2026</p>
+    <p class="updated">Last updated: July 22, 2026</p>
 
-    <p>We consider equal access for all visitors a priority, and work to make this site accessible in accordance with the Israeli Equal Rights for Persons with Disabilities regulations (Service Accessibility Adjustments, 2013) and Israeli Standard 5568, which is based on the WCAG 2.1 guidelines at level AA.</p>
+    <p>We consider equal access for all visitors a priority, and work to make this site accessible in accordance with the Israeli Equal Rights for Persons with Disabilities regulations (Service Accessibility Adjustments, 2013) and Israeli Standard 5568 Part 1 at level AA. That standard is based on the W3C's WCAG 2.0 guidelines. The site was also tested against WCAG 2.1 level AA, which extends them.</p>
 
     <h2>Accessibility features on this site</h2>
     <ul>
       <li>Semantic page structure with a proper heading hierarchy and labeled navigation regions</li>
-      <li>Full keyboard navigation, including a skip link and clear focus indicators</li>
-      <li>Color contrast ratios meeting at least level AA for every text and background pairing</li>
-      <li>Alternative text for images and descriptions for graphic elements</li>
-      <li>Forms with visible labels and clear guidance</li>
+      <li>Full keyboard navigation, including a skip link and a clear 3-pixel focus indicator</li>
+      <li>Contrast ratios of at least 4.5:1 for every text and background pairing on the site</li>
+      <li>Contrast of at least 3:1 on the visible boundaries of form fields, buttons and link cards</li>
+      <li>Alternative text for images, with decorative graphics hidden from screen readers so they do not clutter the reading experience</li>
+      <li>Forms with visible labels, clear guidance, and error messages that are announced to screen readers</li>
       <li>Touch targets of at least 44 pixels</li>
-      <li>Support for text resizing and responsive display at any screen size</li>
+      <li>Support for text resizing up to 200% without horizontal scrolling, and responsive display at any screen size</li>
       <li>Respect for the user's reduced-motion preference (prefers-reduced-motion)</li>
       <li>Bilingual site, Hebrew and English, with correct directionality in each language</li>
     </ul>
 
+    <h2>How accessibility was tested</h2>
+    <p>Every page on this site was checked automatically with axe-core against the WCAG level AA rule set, and manually: full keyboard navigation, focus order, computed contrast ratios for every color pairing, and the real rendered size of each touch target measured in the browser. The most recent check was carried out on July 22, 2026 and found no level AA defects.</p>
+
     <h2>Known limitations</h2>
-    <p>The downloadable PDF files on this site may not be fully accessible to screen readers. If you have difficulty reading them, contact us and we will gladly provide the content in an alternative format.</p>
+    <p>The downloadable PDF files on this site are built as tagged PDFs, with a document title and a declared language, so screen readers should read them correctly. They have not been tested against every assistive technology in use.</p>
+    <p>The contact form is submitted through an external service. If JavaScript is disabled in your browser, the confirmation page you see belongs to that service and is outside our control.</p>
+    <p>In either case, if you run into difficulty, contact us and we will provide the content or the service another way.</p>
 
     <h2>Found an issue? Tell us</h2>
     <p>If you found an element that is not accessible or ran into any difficulty, we would appreciate hearing about it and will address it as soon as possible:</p>
     <ul>
-      <li>Accessibility coordinator: Asaf Lavi</li>
+      <li>Accessibility contact: Asaf Lavi</li>
       <li>Email: <a href="mailto:asaflavi@al-solutions.co.il">asaflavi@al-solutions.co.il</a></li>
       <li>Phone: <a href="tel:+972502636703">+972-50-2636703</a></li>
     </ul>

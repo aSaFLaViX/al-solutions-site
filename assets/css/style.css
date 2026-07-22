@@ -30,13 +30,19 @@
   --white: #FFFFFF;
   --muted: #B9CBE4;
   --muted-light: #C9D6E8;
-  --muted-dim: #7E93AD;
-  --border-dark: #33547A;
+  --muted-dim: #7E93AD;      /* muted text on DARK only: 5.2:1 on navy, 5.7:1 on navy-deep */
+  --border-dark: #33547A;    /* decorative rules/cards only, never a control boundary */
   --ink: #0F172A;
   --ink-soft: #3D4B63;
+  --ink-dim: #5A6E8C;        /* muted text on LIGHT only: 5.2:1 on paper, 4.8:1 on tint.
+                                --muted-dim fails here (3.15:1) and cannot be reused. */
   --paper: #FFFFFF;
   --paper-tint: #F4F7FB;
-  --border-light: #D8E0EC;
+  --border-light: #D8E0EC;   /* decorative card borders only, never a control boundary */
+  /* Control boundaries need 3:1 (WCAG 1.4.11 Non-text Contrast). Kept separate from the
+     decorative border tokens so restyling cards can never silently break a control. */
+  --control-border-light: #77859B;  /* 3.7:1 on paper, 3.5:1 on tint */
+  --control-border-dark: #6382AD;   /* 4.2:1 on navy, 3.3:1 on navy-card, 4.6:1 on navy-deep */
   --error: #EF4444;
   --success: #22C55E;
   --font: 'Heebo', -apple-system, "Helvetica Neue", "Segoe UI", Arial, sans-serif;
@@ -114,6 +120,8 @@ a:focus-visible, button:focus-visible, input:focus-visible, textarea:focus-visib
   font-size: 26px;           /* single knob: drives both mark and text */
   text-decoration: none;
   direction: ltr;            /* wordmark always LTR, even in RTL pages */
+  padding-block: 8px;        /* the lockup alone is 29px tall; this makes it a 45px target.
+                                Padding only, so the derived baseline metrics above still hold. */
 }
 .brand img {
   height: 0.9259em;
@@ -139,9 +147,9 @@ a:focus-visible, button:focus-visible, input:focus-visible, textarea:focus-visib
 }
 .site-nav a:hover { color: var(--white); }
 .lang-switch {
-  border: 1px solid var(--border-dark);
+  border: 1px solid var(--control-border-dark);
   border-radius: 999px;
-  padding: 6px 14px !important;
+  padding: 10px 14px !important;   /* 10px, not 6px: lands the pill at 44px tall */
   color: var(--white) !important;
   font-weight: 700;
 }
@@ -201,9 +209,9 @@ h2 { font-size: clamp(26px, 4vw, 34px); font-weight: 700; line-height: 1.25; mar
 }
 .btn-primary { background: var(--blue); color: var(--white); }
 .btn-primary:hover { background: #1F6FE8; }
-.btn-secondary { background: transparent; color: var(--white); border-color: var(--border-dark); }
+.btn-secondary { background: transparent; color: var(--white); border-color: var(--control-border-dark); }
 .btn-secondary:hover { border-color: var(--blue); }
-.section-light .btn-secondary, .section-tint .btn-secondary { color: var(--blue-ink); border-color: var(--border-light); }
+.section-light .btn-secondary, .section-tint .btn-secondary { color: var(--blue-ink); border-color: var(--control-border-light); }
 .section-light .btn-secondary:hover, .section-tint .btn-secondary:hover { border-color: var(--blue-ink); }
 .btn svg { flex: none; }
 
@@ -346,7 +354,9 @@ h2 { font-size: clamp(26px, 4vw, 34px); font-weight: 700; line-height: 1.25; mar
   font-weight: 500;
   padding: 14px 18px;
   background: var(--navy-card);
-  border: 1px solid var(--border-dark);
+  /* navy-card is only 1.26:1 against the section gradient, so this border really is
+     the card's visible boundary and has to clear 3:1, not just look tidy. */
+  border: 1px solid var(--control-border-dark);
   border-radius: var(--radius-card);
   transition: border-color .18s ease;
 }
@@ -369,7 +379,7 @@ h2 { font-size: clamp(26px, 4vw, 34px); font-weight: 700; line-height: 1.25; mar
   font-size: 16px;
   color: var(--ink);
   background: var(--paper);
-  border: 1px solid #B6C2D4;
+  border: 1px solid var(--control-border-light);
   border-radius: var(--radius-btn);
   padding: 12px 14px;
   min-height: 48px;
@@ -402,8 +412,10 @@ h2 { font-size: clamp(26px, 4vw, 34px); font-weight: 700; line-height: 1.25; mar
 .site-footer a { color: var(--muted-light); text-decoration: none; }
 .site-footer a:hover { color: var(--white); text-decoration: underline; }
 .footer-links { display: flex; gap: 22px; flex-wrap: wrap; }
-.footer-links a { display: inline-block; padding-block: 10px; } /* 24px+ target size */
-.site-footer .brand { font-size: 19px; } /* one knob scales the whole lockup */
+/* 23.2px text + 22 = 45px tall; min-width catches short labels like "עברית" (37px on its own) */
+.footer-links a { display: inline-block; padding-block: 11px; min-width: 44px; text-align: center; }
+/* one knob scales the whole lockup; padding lifts the 19px lockup to a 44px target */
+.site-footer .brand { font-size: 19px; padding-block: 11px; }
 
 /* ---------- Legal / content pages ---------- */
 .page-main { padding-block: 64px; }
@@ -411,7 +423,7 @@ h2 { font-size: clamp(26px, 4vw, 34px); font-weight: 700; line-height: 1.25; mar
 .page-main h2 { font-size: 22px; margin-block-start: 34px; }
 .page-main p, .page-main li { color: var(--ink-soft); margin-block-end: 12px; max-width: 76ch; }
 .page-main ul, .page-main ol { padding-inline-start: 24px; margin-block-end: 16px; }
-.page-main .updated { font-size: 14.5px; color: var(--muted-dim); margin-block-end: 30px; }
+.page-main .updated { font-size: 14.5px; color: var(--ink-dim); margin-block-end: 30px; }
 
 /* ---------- Thanks page ---------- */
 .thanks-main { min-height: 55vh; display: flex; align-items: center; }
