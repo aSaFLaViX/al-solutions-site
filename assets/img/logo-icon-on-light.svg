@@ -1,5 +1,5 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 120 100" role="img" aria-label="AL Solutions logo">
-  <path fill="#0B1F3A" d="M7,90 L36,10 L52,10 L81,90 L66,90 L48,34 L40,34 L22,90 Z"/>
-  <rect fill="#0B1F3A" x="26" y="62" width="36" height="11"/>
-  <path fill="#2D7FF9" d="M68,10 L82,10 L82,76 L113,76 L113,90 L68,90 Z"/>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 122 100" role="img" aria-label="AL Solutions logo">
+  <path fill="#0B1F3A" d="M5,90 L36,10 L52,10 L83,90 L64,90 L47,44 L41,44 L24,90 Z"/>
+  <rect fill="#0B1F3A" x="18" y="58" width="52" height="17"/>
+  <path fill="#2D7FF9" d="M72,10 L91,10 L91,71 L117,71 L117,90 L72,90 Z"/>
 </svg>

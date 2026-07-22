@@ -100,15 +100,34 @@ a:focus-visible, button:focus-visible, input:focus-visible, textarea:focus-visib
   flex-wrap: wrap;
   padding-block: 8px;
 }
+/* Wordmark lockup. The mark supplies the "AL"; the text supplies "Solutions".
+   Metrics are derived, not eyeballed, so mark and text read as one wordmark:
+     Heebo 800 cap/em  = 0.7407   (measured)
+     mark cap/box      = 0.80     (letters occupy y=10..90 of a 0..100 viewBox)
+     => mark height    = font-size * 0.9259
+     mark baseline sits at y=90 of 100, so nudge it down by 10% of its height
+     to land on the text baseline. */
 .brand {
-  display: flex;
-  align-items: center;
-  gap: 9px;
+  display: inline-flex;
+  align-items: baseline;
+  gap: 0.30em;
+  font-size: 26px;           /* single knob: drives both mark and text */
   text-decoration: none;
-  direction: ltr; /* wordmark always LTR; the mark supplies the "AL" */
+  direction: ltr;            /* wordmark always LTR, even in RTL pages */
 }
-.brand img { height: 34px; width: auto; }
-.brand .brand-name { font-size: 24px; font-weight: 800; color: var(--white); letter-spacing: .3px; }
+.brand img {
+  height: 0.9259em;
+  width: auto;
+  position: relative;
+  top: 0.09259em;
+}
+.brand .brand-name {
+  font-size: 1em;
+  font-weight: 800;
+  color: var(--white);
+  line-height: 1;
+  letter-spacing: -0.005em;
+}
 
 .site-nav { display: flex; align-items: center; gap: 4px 18px; flex-wrap: wrap; }
 .site-nav a {
@@ -382,8 +401,7 @@ h2 { font-size: clamp(26px, 4vw, 34px); font-weight: 700; line-height: 1.25; mar
 .site-footer a:hover { color: var(--white); text-decoration: underline; }
 .footer-links { display: flex; gap: 22px; flex-wrap: wrap; }
 .footer-links a { display: inline-block; padding-block: 10px; } /* 24px+ target size */
-.site-footer .brand img { height: 26px; }
-.site-footer .brand .brand-name { font-size: 18px; }
+.site-footer .brand { font-size: 19px; } /* one knob scales the whole lockup */
 
 /* ---------- Legal / content pages ---------- */
 .page-main { padding-block: 64px; }
