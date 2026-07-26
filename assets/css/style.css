@@ -252,11 +252,14 @@ h2 { font-size: clamp(26px, 4vw, 34px); font-weight: 700; line-height: 1.25; mar
 }
 
 /* ---------- Process ---------- */
+/* An <ol> so assistive tech announces "list, 4 items" and each step's position;
+   the visual numbers stay aria-hidden spans. list-style:none makes Safari/VoiceOver
+   drop list semantics, which role="list" on the element restores. */
 .steps {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
   gap: 22px;
-  counter-reset: step;
+  list-style: none;
 }
 .step {
   background: var(--navy-card);
@@ -273,7 +276,7 @@ h2 { font-size: clamp(26px, 4vw, 34px); font-weight: 700; line-height: 1.25; mar
   background: var(--blue);
   color: var(--white);
   font-weight: 800;
-  font-size: 18px;
+  font-size: 19px; /* WCAG large-text threshold (bold >= 18.66px): white on --blue passes AA at 3.81:1, same convention as .btn */
   margin-block-end: 14px;
 }
 .step h3 { font-size: 19px; margin-block-end: 8px; }
@@ -336,7 +339,9 @@ h2 { font-size: clamp(26px, 4vw, 34px); font-weight: 700; line-height: 1.25; mar
   border-radius: 14px;
   color: var(--blue);
 }
-.resource-card .doc-body { flex: 1; min-width: 260px; }
+/* min() caps the floor at the available width: at a 320px viewport the card offers ~212px
+   and a fixed 260px floor pushes text out of the card (real h-scroll on classic scrollbars). */
+.resource-card .doc-body { flex: 1; min-width: min(260px, 100%); }
 .resource-card h3 { font-size: 21px; margin-block-end: 6px; }
 .resource-card p { color: var(--ink-soft); font-size: 16px; margin-block-end: 14px; }
 .resource-card .row { display: flex; gap: 12px; flex-wrap: wrap; }
