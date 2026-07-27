@@ -1,0 +1,141 @@
+/* AL Solutions accessibility widget (תפריט נגישות) - page display modes.
+   Self-hosted, no third-party script and no network calls.
+
+   This file holds ONLY the modes applied to the page itself. The panel's own UI lives
+   in a shadow root built by a11y-widget.js, which is why the overrides below can use *
+   freely: document stylesheets do not match elements inside a shadow root, so nothing
+   here can ever break the panel. The host element #a11y-widget is excluded explicitly.
+
+   Mode classes are set on <html> by the script. Every colour pair here is chosen to
+   clear WCAG AA on its own, because a mode that "helps" while failing contrast is worse
+   than no mode at all. */
+
+/* ---------- High contrast: dark (black background, white text, yellow links) ---------- */
+html.a11y-hc-dark *:not(#a11y-widget) {
+  /* Instant, never a fade: a 180ms background transition passes through an
+     unreadable mid-state (measured 2.94:1 on .btn-primary). */
+  transition: none !important;
+  background-color: #000000 !important;
+  background-image: none !important;
+  color: #FFFFFF !important;        /* 21:1 on black */
+  border-color: #FFFFFF !important;
+  box-shadow: none !important;
+  text-shadow: none !important;
+}
+html.a11y-hc-dark a:not(#a11y-widget),
+html.a11y-hc-dark a:not(#a11y-widget) * {
+  color: #FFFF00 !important;        /* 19.6:1 on black, and hue-distinct from body text */
+}
+
+/* ---------- High contrast: light (white background, black text, blue links) ---------- */
+html.a11y-hc-light *:not(#a11y-widget) {
+  /* Instant, never a fade: a 180ms background transition passes through an
+     unreadable mid-state (measured 2.94:1 on .btn-primary). */
+  transition: none !important;
+  background-color: #FFFFFF !important;
+  background-image: none !important;
+  color: #000000 !important;        /* 21:1 on white */
+  border-color: #000000 !important;
+  box-shadow: none !important;
+  text-shadow: none !important;
+}
+html.a11y-hc-light a:not(#a11y-widget),
+html.a11y-hc-light a:not(#a11y-widget) * {
+  color: #0000CC !important;        /* 12.3:1 on white */
+}
+
+/* ---------- Inverted colours ----------
+   The filter sits on <html> so the whole page flips in one pass. Raster and SVG-file
+   images are flipped back so logos and the AWS badge keep their real colours; inline
+   <svg> icons are deliberately NOT flipped back, because they inherit currentColor and
+   should follow the inverted text they sit next to. The widget host is flipped back so
+   the panel stays on-brand instead of turning orange. */
+html.a11y-invert {
+  filter: invert(1) hue-rotate(180deg);
+  background-color: #FFFFFF;
+}
+html.a11y-invert img,
+html.a11y-invert video,
+html.a11y-invert iframe,
+html.a11y-invert #a11y-widget {
+  filter: invert(1) hue-rotate(180deg);
+}
+
+/* ---------- Grayscale ---------- */
+html.a11y-grayscale { filter: grayscale(1); }
+
+/* ---------- Highlight links ---------- */
+html.a11y-links a:not(#a11y-widget) {
+  text-decoration: underline !important;
+  text-decoration-thickness: 2px !important;
+  text-underline-offset: 3px !important;
+  font-weight: 700 !important;
+  outline: 1px dashed currentColor;
+  outline-offset: 3px;
+}
+
+/* ---------- Stop animations ----------
+   Same declarations as the stylesheet's prefers-reduced-motion block, applied on demand
+   for visitors whose OS setting is off but who still want the page to hold still. */
+html.a11y-no-motion { scroll-behavior: auto !important; }
+html.a11y-no-motion *,
+html.a11y-no-motion *::before,
+html.a11y-no-motion *::after {
+  transition: none !important;
+  animation: none !important;
+  scroll-behavior: auto !important;
+}
+
+/* ---------- Long-word safety while text is enlarged ----------
+   Scaling font size does not widen containers, so one long word can push the page into
+   horizontal scroll (WCAG 1.4.10 Reflow). Measured case: the hero h1 word "בפרודקשן"
+   reaches 363px at 150% inside a 272px content box on a 320px viewport, which overflowed
+   by 91px. break-word only breaks a word that cannot fit on a line by itself, so normal
+   text is untouched. Applied only while a scale other than 100% is active, which keeps
+   the site's default rendering exactly as designed. */
+html.a11y-scaled *:not(#a11y-widget) {
+  overflow-wrap: break-word !important;
+}
+
+/* ---------- Readable font ----------
+   Arial carries both Hebrew and Latin, so one stack serves both locales. */
+html.a11y-readable-font *:not(#a11y-widget) {
+  font-family: Arial, "Helvetica Neue", Helvetica, sans-serif !important;
+  letter-spacing: 0.02em !important;
+}
+
+/* ---------- Big cursor ----------
+   A 48px arrow with a contrasting outline, so it stays visible on light and dark
+   surfaces alike. Data URI, so there is no extra request. */
+html.a11y-big-cursor,
+html.a11y-big-cursor *:not(#a11y-widget) {
+  cursor: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="48" height="48" viewBox="0 0 48 48"><path d="M6 2l30 20-13 2 7 15-6 3-7-15-11 8z" fill="%23000" stroke="%23fff" stroke-width="2.5" stroke-linejoin="round"/></svg>') 4 2, auto !important;
+}
+html.a11y-big-cursor a:not(#a11y-widget),
+html.a11y-big-cursor button:not(#a11y-widget),
+html.a11y-big-cursor [role="button"]:not(#a11y-widget) {
+  cursor: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="48" height="48" viewBox="0 0 48 48"><path d="M15 3c-2 0-3.5 1.6-3.5 3.5V25l-2.6-3.4c-1.2-1.6-3.5-1.8-5-.5-1.4 1.2-1.6 3.2-.6 4.7l8.4 12.6c1.3 2 3.5 3.1 5.9 3.1h11c3.9 0 7-3.1 7-7V20c0-1.9-1.6-3.5-3.5-3.5-.6 0-1.1.1-1.6.4-.4-1.6-1.9-2.9-3.6-2.9-.8 0-1.5.2-2.1.7-.6-1.3-1.9-2.2-3.4-2.2-.7 0-1.4.2-2 .6V6.5C18.4 4.6 16.9 3 15 3z" fill="%23000" stroke="%23fff" stroke-width="2.5" stroke-linejoin="round"/></svg>') 12 3, pointer !important;
+}
+
+/* ---------- Enhanced focus ----------
+   A black ring wrapped in a white ring. One of the two always contrasts with whatever
+   is behind it, so the indicator clears 1.4.11 on every surface on the site. */
+html.a11y-focus *:focus-visible {
+  outline: 3px solid #000000 !important;
+  outline-offset: 0 !important;
+  box-shadow: 0 0 0 6px #FFFFFF, 0 0 0 9px #000000 !important;
+  border-radius: 3px;
+}
+
+/* ---------- Element currently being read aloud ----------
+   Higher specificity than the contrast overrides above, so the highlight survives in
+   every mode. Amber background with near-black text measures about 15:1. */
+.a11y-reading,
+html.a11y-hc-dark .a11y-reading,
+html.a11y-hc-light .a11y-reading {
+  background-color: #FEF3C7 !important;
+  color: #0F172A !important;
+  outline: 3px solid #92400E !important;
+  outline-offset: 2px;
+  border-radius: 4px;
+}
