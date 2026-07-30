@@ -1,0 +1,208 @@
+<!DOCTYPE html>
+<html lang="he" dir="rtl">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>דמו: עוזר ידע RAG עם מקורות | AL Solutions</title>
+<meta name="description" content="דמו אינטראקטיבי: עוזר ידע שעונה מתוך נהלי החברה בלבד, עם ציטוט מקור לחיץ לכל תשובה, וסירוב מפורש כשאין מקור. נתונים סינתטיים בלבד.">
+<link rel="canonical" href="https://al-solutions.co.il/demos/rag-assistant/">
+<link rel="alternate" hreflang="he" href="https://al-solutions.co.il/demos/rag-assistant/">
+<link rel="alternate" hreflang="en" href="https://al-solutions.co.il/en/demos/rag-assistant/">
+<link rel="alternate" hreflang="x-default" href="https://al-solutions.co.il/en/demos/rag-assistant/">
+<meta property="og:type" content="website">
+<meta property="og:title" content="דמו: עוזר ידע RAG עם מקורות">
+<meta property="og:description" content="כל תשובה עם מקור לחיץ. אין מקור? אין תשובה. דמו עם נתונים סינתטיים.">
+<meta property="og:url" content="https://al-solutions.co.il/demos/rag-assistant/">
+<meta property="og:image" content="https://al-solutions.co.il/assets/img/og-he.png">
+<meta property="og:locale" content="he_IL">
+<link rel="icon" href="/assets/img/favicon.ico" sizes="32x32">
+<link rel="icon" href="/assets/img/favicon-32.png" type="image/png" sizes="32x32">
+<link rel="icon" href="/assets/img/favicon-192.png" type="image/png" sizes="192x192">
+<link rel="apple-touch-icon" href="/assets/img/apple-touch-icon.png">
+<link rel="stylesheet" href="/assets/css/demos.css">
+<link rel="stylesheet" href="/assets/css/a11y-widget.css">
+</head>
+<body>
+<a class="skip-link" href="#main">דילוג לתוכן</a>
+
+<header class="demo-header">
+  <div class="container">
+    <a class="brand" href="/" aria-label="AL Solutions, דף הבית">
+      <img src="/assets/img/logo-icon-on-dark.svg" alt="" width="122" height="100">
+      <span class="brand-name">Solutions</span>
+    </a>
+    <div class="header-links">
+      <span class="demo-badge"><span class="dot" aria-hidden="true"></span>דמו · נתונים סינתטיים</span>
+      <a href="/demos/">כל הדמואים</a>
+      <a href="/#contact">דברו איתי</a>
+      <a class="lang-switch" href="/en/demos/rag-assistant/" lang="en" hreflang="en">EN</a>
+    </div>
+  </div>
+</header>
+
+<main id="main">
+  <section class="demo-hero">
+    <div class="container">
+      <span class="kicker">עוזרי ידע RAG</span>
+      <h1>עוזר ידע שלא ממציא: כל תשובה עם מקור</h1>
+      <p class="sub">העוזר עונה מתוך נהלי חברה פיקטיביים בלבד. בחרו שאלה, קבלו תשובה עם ציטוט מהמקור המדויק, ונסו גם את השאלה שאין לה תשובה במסמכים: שם רואים את ההבדל בין עוזר רציני לצ'אטבוט שמנחש.</p>
+    </div>
+  </section>
+
+  <div class="container">
+    <div class="app-frame" dir="rtl">
+      <div class="app-bar">
+        <span class="app-name">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" aria-hidden="true"><path d="M8 3h9a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2H8"/><path d="M5 3v18"/><path d="M11 8h5M11 12h5M11 16h3"/></svg>
+          עוזר הידע הארגוני
+        </span>
+        <span class="app-badge">סביבת דמו · חברה פיקטיבית: יבוא הצפון בע"מ</span>
+      </div>
+      <div class="app-body" id="app-root"></div>
+    </div>
+  </div>
+
+  <section class="demo-explain">
+    <div class="container">
+      <h2>מה קורה כאן בעצם</h2>
+      <div class="explain-grid">
+        <div class="explain-card">
+          <span class="num" aria-hidden="true">1</span>
+          <h3>אחזור לפני תשובה</h3>
+          <p>השאלה לא נשלחת "לאוויר". המערכת מאחזרת קודם את הקטעים הרלוונטיים מתוך מסמכי הארגון.</p>
+        </div>
+        <div class="explain-card">
+          <span class="num" aria-hidden="true">2</span>
+          <h3>תשובה עם ציטוט</h3>
+          <p>כל טענה בתשובה מגובה במקור. לוחצים על מספר המקור ורואים בדיוק מאיפה זה הגיע.</p>
+        </div>
+        <div class="explain-card">
+          <span class="num" aria-hidden="true">3</span>
+          <h3>אין מקור? אין תשובה</h3>
+          <p>שאלה שאין לה כיסוי במסמכים מקבלת סירוב מפורש והפניה לערוץ אנושי. בלי הזיות ובלי ניחושים.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="demo-stats">
+    <div class="container">
+      <h2>מה הופך את זה למערכת רצינית</h2>
+      <div class="stats-grid">
+        <div class="stat-card"><span class="n">100%</span><span class="l">מהתשובות מגיעות עם מקור, או עם סירוב מפורש</span></div>
+        <div class="stat-card"><span class="n">0</span><span class="l">ניחושים: מה שלא נמצא במסמכים, לא נענה</span></div>
+        <div class="stat-card"><span class="n">גולדן דאטה סט</span><span class="l">בפרויקט אמיתי העוזר נמדד על שאלות אמת שלכם, לפני עלייה לאוויר</span></div>
+      </div>
+      <p class="stats-note">הנהלים בדמו מומצאים. בעבודה אמיתית העוזר מחובר למסמכים שלכם, עם הרשאות גישה ומדידת דיוק מסודרת.</p>
+    </div>
+  </section>
+
+  <section class="demo-cta">
+    <div class="container">
+      <h2>רוצים עוזר כזה על הידע שלכם?</h2>
+      <p>שיחת היכרות של 30 דקות, בלי התחייבות. ממפים יחד איזה ידע ארגוני שווה להנגיש ככה.</p>
+      <div class="cta-row">
+        <a class="btn btn-primary" href="https://wa.me/972502636703?text=%D7%94%D7%99%D7%99%2C%20%D7%A8%D7%90%D7%99%D7%AA%D7%99%20%D7%90%D7%AA%20%D7%94%D7%93%D7%9E%D7%95%20%D7%A9%D7%9C%20%D7%A2%D7%95%D7%96%D7%A8%20%D7%94%D7%99%D7%93%D7%A2%20%D7%95%D7%90%D7%A9%D7%9E%D7%97%20%D7%9C%D7%A9%D7%9E%D7%95%D7%A2%20%D7%A2%D7%95%D7%93">שיחת היכרות חינם ב-WhatsApp</a>
+        <a class="btn btn-secondary" href="/demos/">לשאר הדמואים</a>
+      </div>
+    </div>
+  </section>
+</main>
+
+<footer class="demo-footer">
+  <div class="container">
+    <div class="flinks">
+      <a href="/">דף הבית</a>
+      <a href="/privacy/">מדיניות פרטיות</a>
+      <a href="/accessibility/">הצהרת נגישות</a>
+      <a href="/en/demos/rag-assistant/" lang="en" hreflang="en">English</a>
+    </div>
+    <p>© 2026 AL Solutions. כל הזכויות שמורות. הדמו משתמש בנתונים סינתטיים בלבד.</p>
+  </div>
+</footer>
+
+<script>
+window.DEMO = {
+  lang: 'he', dir: 'rtl',
+  strings: {
+    chatTitle: 'שיחה',
+    aiName: 'עוזר הידע',
+    hello: 'שלום! אני עונה רק מתוך נהלי החברה, ולכל תשובה מצורף מקור. בחרו שאלה מהרשימה למטה.',
+    inputPlaceholder: 'בדמו הציבורי בוחרים שאלה מוכנה למטה',
+    inputLabel: 'שאלה לעוזר הידע',
+    send: 'שליחה',
+    corpusTitle: 'מאגר הידע',
+    corpusMeta: 'האינדקס בדמו: 4 מסמכים, 118 קטעים. אצלכם: מאגר הידע הארגוני המלא, עם הרשאות גישה.',
+    retrievedTitle: 'קטעים שאוחזרו',
+    pickQ: 'בחרו שאלה:',
+    searching: 'מאחזר מהמסמכים...',
+    meta: n => (n === 1 ? 'אוחזר מקור אחד' : 'אוחזרו ' + n + ' מקורות') + ' · לחצו על מספר המקור בתשובה כדי לראות את הציטוט',
+    answered: 'התקבלה תשובה',
+    guardPill: 'מחוץ לתחום',
+    guardTitle: 'אין מקור, אין תשובה',
+    noneTitle: 'לא נמצאו קטעים רלוונטיים',
+    noneBody: 'החיפוש רץ על כל 118 הקטעים ולא החזיר אף קטע מעל סף הרלוונטיות. בלי מקור, אין תשובה.',
+    allDone: 'עברתם על כל השאלות בדמו. בגרסה אמיתית שואלים בשפה חופשית, על המסמכים שלכם.'
+  },
+  sources: [
+    { title: 'נוהל רכש והתקשרויות ספקים', meta: '14 עמודים' },
+    { title: 'מדיניות החזרות וזיכויים', meta: '6 עמודים' },
+    { title: 'נוהל בטיחות מחסן ותפעול', meta: '11 עמודים' },
+    { title: 'מדריך קליטת עובד חדש', meta: '9 עמודים' }
+  ],
+  qa: [
+    {
+      q: 'מה תהליך האישור להזמנת רכש מעל 20,000 ₪?',
+      a: 'לפי נוהל הרכש, הזמנה מעל 20,000 ₪ לפני מע"מ דורשת אישור כפול: מנהל הרכש וסמנכ"ל הכספים <button class="cite" data-c="0" type="button" aria-label="מקור 1">1</button>. אם אחד המאשרים נעדר יותר משלושה ימי עסקים, ממלא מקומו הקבוע רשאי לאשר, בכפוף לתיעוד בהערות ההזמנה <button class="cite" data-c="1" type="button" aria-label="מקור 2">2</button>.',
+      cites: [
+        { doc: 'נוהל רכש', section: 'סעיף 4.2', quote: 'הזמנה בסכום העולה על 20,000 ₪ לפני מע"מ טעונה <mark>אישור כפול: מנהל הרכש וסמנכ"ל הכספים</mark>, ותועבר לאישור במערכת בתוך שני ימי עסקים.' },
+        { doc: 'נוהל רכש', section: 'סעיף 4.5', quote: 'בהיעדרות של אחד המאשרים מעל שלושה ימי עסקים, <mark>ממלא מקומו הקבוע רשאי לאשר</mark>, בכפוף לתיעוד בהערות ההזמנה.' }
+      ]
+    },
+    {
+      q: 'תוך כמה זמן מדווחים על סחורה פגומה לספק?',
+      a: 'על פגם גלוי שהתגלה בקבלת הסחורה מדווחים לספק בתוך חמישה ימי עסקים, בצירוף תיעוד מצולם <button class="cite" data-c="0" type="button" aria-label="מקור 1">1</button>. על פגם נסתר אפשר לדווח עד 30 יום ממועד הקבלה <button class="cite" data-c="1" type="button" aria-label="מקור 2">2</button>.',
+      cites: [
+        { doc: 'מדיניות החזרות', section: 'סעיף 2.1', quote: 'פגם שהתגלה בעת קבלת הסחורה ידווח לספק <mark>בתוך 5 ימי עסקים</mark> ממועד קבלת המשלוח, בצירוף תיעוד מצולם.' },
+        { doc: 'מדיניות החזרות', section: 'סעיף 2.4', quote: 'פגם נסתר שלא ניתן היה לגלותו בבדיקה סבירה ניתן לדווח <mark>עד 30 יום ממועד הקבלה</mark>, בכפוף לבדיקת הספק.' }
+      ]
+    },
+    {
+      q: 'אילו הסמכות נדרשות ממפעיל מלגזה?',
+      a: 'הפעלת מלגזה מותרת רק לעובד עם היתר מלגזן בתוקף ממשרד העבודה, ואחרי חניכה פנימית של לפחות 8 שעות <button class="cite" data-c="0" type="button" aria-label="מקור 1">1</button>. הנוהל גם מחייב רענון בטיחות שנתי <button class="cite" data-c="1" type="button" aria-label="מקור 2">2</button>.',
+      cites: [
+        { doc: 'נוהל בטיחות מחסן', section: 'סעיף 7.3', quote: 'הפעלת מלגזה מותרת אך ורק לעובד בעל <mark>היתר מלגזן בתוקף</mark> ולאחר <mark>חניכה פנימית של 8 שעות לפחות</mark> בליווי מפעיל מוסמך.' },
+        { doc: 'נוהל בטיחות מחסן', section: 'סעיף 7.6', quote: 'כל מפעיל מלגזה יעבור <mark>רענון בטיחות שנתי</mark>; מפעיל שלא השלים רענון במועד תושעה הרשאתו.' }
+      ]
+    },
+    {
+      q: 'מה עובד חדש מקבל ביום הראשון?',
+      a: 'ביום הראשון העובד מקבל תג כניסה, חשבון מערכות ומנטור אישי, ונקבעת לו פגישת היכרות עם מנהל המחלקה <button class="cite" data-c="0" type="button" aria-label="מקור 1">1</button>.',
+      cites: [
+        { doc: 'מדריך קליטת עובד', section: 'פרק 1', quote: 'ביום עבודתו הראשון יוקצו לעובד <mark>תג כניסה, חשבון מערכות ומנטור אישי</mark>, ותתואם פגישת היכרות עם מנהל המחלקה.' }
+      ]
+    },
+    {
+      q: 'אפשר לפצל הזמנה לשתיים כדי לא לעבור את סף האישור?',
+      a: 'לא. נוהל הרכש אוסר זאת במפורש: פיצול הזמנות במטרה לעקוף ספי אישור נחשב להפרת נוהל <button class="cite" data-c="0" type="button" aria-label="מקור 1">1</button>. אם יש צורך תפעולי אמיתי בפיצול, נדרש אישור מראש בכתב של סמנכ"ל הכספים.',
+      cites: [
+        { doc: 'נוהל רכש', section: 'סעיף 4.7', quote: '<mark>פיצול הזמנות במטרה לעקוף ספי אישור אסור במפורש</mark> ויטופל כהפרת נוהל. חריגים יאושרו מראש בכתב על ידי סמנכ"ל הכספים.' }
+      ]
+    },
+    {
+      q: 'מה מדיניות הבונוסים של ההנהלה הבכירה?',
+      a: 'על השאלה הזאת אני לא עונה: המידע לא קיים במסמכים שיש לי גישה אליהם, ואני לא מנחש.',
+      cites: [],
+      guard: true,
+      guardWhy: 'העוזר עונה רק מתוך מסמכים שאושרו לו, ורק כשנמצא מקור. כשאין מקור, הוא אומר את זה במפורש ומפנה לערוץ אנושי.',
+      guardCta: 'פתיחת פנייה למשאבי אנוש',
+      guardDone: 'נפתחה פנייה HR-2049 (סימולציה)'
+    }
+  ]
+};
+</script>
+<script src="/assets/js/demo-core.js"></script>
+<script src="/assets/js/demo-rag.js"></script>
+<script src="/assets/js/a11y-widget.js" defer></script>
+</body>
+</html>

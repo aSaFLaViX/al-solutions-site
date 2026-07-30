@@ -447,3 +447,22 @@ h2 { font-size: clamp(26px, 4vw, 34px); font-weight: 700; line-height: 1.25; mar
   .stats { grid-template-columns: 1fr; }
   .cta-row .btn { width: 100%; }
 }
+
+/* ---------- Demos section (added 2026-07-30, staged) ---------- */
+a.card-link {
+  display: flex;
+  flex-direction: column;
+  text-decoration: none;
+  transition: border-color .18s ease, transform .18s ease;
+}
+a.card-link:hover { border-color: var(--blue-ink); transform: translateY(-3px); }
+a.card-link p { flex: 1; }
+a.card-link .go {
+  margin-block-start: 12px;
+  color: var(--blue-ink);
+  font-weight: 700;
+  font-size: 15.5px;
+}
+a.card-link:hover .go { text-decoration: underline; }
+.demos-note { margin-block-start: 26px; font-size: 15.5px; color: var(--ink-soft); }
+.demos-note a { color: var(--blue-ink); }

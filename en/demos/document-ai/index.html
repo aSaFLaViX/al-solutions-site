@@ -1,0 +1,215 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Demo: AI Document Processing | AL Solutions</title>
+<meta name="description" content="Interactive demo: invoice and delivery note intake, field extraction with a confidence score per field, and human review only where it matters. Synthetic data only.">
+<link rel="canonical" href="https://al-solutions.co.il/en/demos/document-ai/">
+<link rel="alternate" hreflang="he" href="https://al-solutions.co.il/demos/document-ai/">
+<link rel="alternate" hreflang="en" href="https://al-solutions.co.il/en/demos/document-ai/">
+<link rel="alternate" hreflang="x-default" href="https://al-solutions.co.il/en/demos/document-ai/">
+<meta property="og:type" content="website">
+<meta property="og:title" content="Demo: AI Document Processing">
+<meta property="og:description" content="From scanned invoice to clean record: field extraction, confidence scores and a human in the loop. Synthetic data demo.">
+<meta property="og:url" content="https://al-solutions.co.il/en/demos/document-ai/">
+<meta property="og:image" content="https://al-solutions.co.il/assets/img/og-en.png">
+<meta property="og:locale" content="en_US">
+<link rel="icon" href="/assets/img/favicon.ico" sizes="32x32">
+<link rel="icon" href="/assets/img/favicon-32.png" type="image/png" sizes="32x32">
+<link rel="icon" href="/assets/img/favicon-192.png" type="image/png" sizes="192x192">
+<link rel="apple-touch-icon" href="/assets/img/apple-touch-icon.png">
+<link rel="stylesheet" href="/assets/css/demos.css">
+<link rel="stylesheet" href="/assets/css/a11y-widget.css">
+</head>
+<body>
+<a class="skip-link" href="#main">Skip to content</a>
+
+<header class="demo-header">
+  <div class="container">
+    <a class="brand" href="/en/" aria-label="AL Solutions, home page">
+      <img src="/assets/img/logo-icon-on-dark.svg" alt="" width="122" height="100">
+      <span class="brand-name">Solutions</span>
+    </a>
+    <div class="header-links">
+      <span class="demo-badge"><span class="dot" aria-hidden="true"></span>Demo · Synthetic data</span>
+      <a href="/en/demos/">All demos</a>
+      <a href="/en/#contact">Talk to me</a>
+      <a class="lang-switch" href="/demos/document-ai/" lang="he" hreflang="he">עברית</a>
+    </div>
+  </div>
+</header>
+
+<main id="main">
+  <section class="demo-hero">
+    <div class="container">
+      <span class="kicker">DOCUMENT AI</span>
+      <h1>From scanned invoice to clean record, no typing</h1>
+      <p class="sub">Pick a sample document and hit process. The system identifies the document type, extracts the fields that matter with a confidence score per field, and routes to human review only what truly needs eyes. Every number on this page is invented.</p>
+    </div>
+  </section>
+
+  <div class="container">
+    <div class="app-frame" dir="ltr">
+      <div class="app-bar">
+        <span class="app-name">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" aria-hidden="true"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><path d="M14 2v6h6"/><path d="M9 13l2 2 4-4"/></svg>
+          Smart Document Intake
+        </span>
+        <span class="app-badge">Demo environment · Fictional company: Northline Imports Ltd</span>
+      </div>
+      <div class="app-body" id="app-root"></div>
+    </div>
+  </div>
+
+  <section class="demo-explain">
+    <div class="container">
+      <h2>What is actually happening here</h2>
+      <div class="explain-grid">
+        <div class="explain-card">
+          <span class="num" aria-hidden="true">1</span>
+          <h3>Intake and recognition</h3>
+          <p>The document is scanned, OCRed, and the system classifies on its own whether it is an invoice, a delivery note or another form.</p>
+        </div>
+        <div class="explain-card">
+          <span class="num" aria-hidden="true">2</span>
+          <h3>Extraction with confidence</h3>
+          <p>Every extracted field carries a confidence score. Automatic cross checks verify the totals add up.</p>
+        </div>
+        <div class="explain-card">
+          <span class="num" aria-hidden="true">3</span>
+          <h3>Human in the loop</h3>
+          <p>Below the confidence threshold, a person decides. Everything else flows straight through. That is how you build trust in a system.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="demo-stats">
+    <div class="container">
+      <h2>What makes this production grade</h2>
+      <div class="stats-grid">
+        <div class="stat-card"><span class="n">100%</span><span class="l">of fields carry a confidence score, no silent guessing</span></div>
+        <div class="stat-card"><span class="n">85%</span><span class="l">confidence threshold in this demo: below it, a person decides</span></div>
+        <div class="stat-card"><span class="n">Golden set</span><span class="l">in a real engagement, accuracy is measured on a sample of your documents before go live</span></div>
+      </div>
+      <p class="stats-note">This demo runs on entirely invented data. In real work we define success upfront and measure on your documents.</p>
+    </div>
+  </section>
+
+  <section class="demo-cta">
+    <div class="container">
+      <h2>Want this on your documents?</h2>
+      <p>A free 30 minute intro call. We map together which documents in your business are worth automating.</p>
+      <div class="cta-row">
+        <a class="btn btn-primary" href="https://wa.me/972502636703?text=Hi%2C%20I%20saw%20the%20document%20AI%20demo%20and%20would%20like%20to%20hear%20more">Free intro call on WhatsApp</a>
+        <a class="btn btn-secondary" href="/en/demos/">More demos</a>
+      </div>
+    </div>
+  </section>
+</main>
+
+<footer class="demo-footer">
+  <div class="container">
+    <div class="flinks">
+      <a href="/en/">Home</a>
+      <a href="/en/privacy/">Privacy policy</a>
+      <a href="/en/accessibility/">Accessibility statement</a>
+      <a href="/demos/document-ai/" lang="he" hreflang="he">עברית</a>
+    </div>
+    <p>© 2026 AL Solutions. All rights reserved. This demo uses synthetic data only.</p>
+  </div>
+</footer>
+
+<script>
+window.DEMO = {
+  lang: 'en', dir: 'ltr', cur: '$', numLocale: 'en-US', threshold: 85,
+  strings: {
+    pick: 'Pick a sample document:',
+    pipeline: 'Processing pipeline',
+    steps: ['File intake', 'OCR and layout analysis', 'Document type detection', 'Field extraction', 'Cross checks'],
+    fields: 'Extracted fields',
+    fieldsEmpty: 'Fields will appear here after processing',
+    run: 'Process document',
+    again: 'Run again',
+    processing: 'Processing the document',
+    count: (a, b) => a + ' of ' + b,
+    date: 'Date', po: 'PO', item: 'Item', qty: 'Qty', unitPrice: 'Unit price', lineTotal: 'Total',
+    subtotal: 'Subtotal', vat: 'Tax', total: 'Total due', totalUnits: 'Total units',
+    poMissingPaper: 'not stated',
+    fSupplier: 'Supplier', fDocNo: 'Document number', fDate: 'Date', fPo: 'PO number',
+    fSubtotal: 'Subtotal before tax', fVat: 'Tax', fTotal: 'Total due', fUnits: 'Total units',
+    missing: 'Not found',
+    reviewNeeded: 'Human review required',
+    reviewPill: 'Review required',
+    reviewTitle: 'The system is unsure, a person decides',
+    reviewWhy: (label, conf) => 'The confidence score for <strong>' + label + '</strong> is ' + conf + '%, below the 85% threshold. The scan is blurry around the total. Pick the correct value:',
+    manual: 'Approved manually',
+    doneAuto: 'Ingested automatically',
+    doneHuman: 'Ingested after human approval',
+    donePartial: 'Ingested, one field to complete',
+    partialNote: 'The PO number is missing from the source document, so the record was flagged for manual completion.',
+    saved: 'Record saved to the system (simulated)',
+    savedA11y: 'Record saved to the system',
+    export: 'Create ERP record',
+    exported: 'Created (simulated)'
+  },
+  docs: [
+    {
+      chip: 'Tax invoice · Apex Industrial Supply',
+      type: 'invoice', typeLabel: 'TAX INVOICE', supplier: 'Apex Industrial Supply Ltd',
+      supplierSub: 'Reg. 514872311 · Netanya Industrial Zone', docNo: 'INV-2447', date: '12 Jul 2026', po: 'PO-8812',
+      vatRate: 0.085,
+      items: [
+        { name: 'Ball bearing 6205', qty: 24, price: 38.50 },
+        { name: 'Drive belt B-1450', qty: 12, price: 74.00 },
+        { name: 'Hydraulic oil 46, 20L drum', qty: 6, price: 210.00 }
+      ],
+      footer: 'Payment terms: net 60 · Generated by the supplier billing system',
+      conf: { supplier: 99, docNo: 98, date: 97, po: 96, subtotal: 98, vat: 99, total: 99 }
+    },
+    {
+      chip: 'Delivery note · Ram Technical Supplies',
+      type: 'delivery', typeLabel: 'DELIVERY NOTE', supplier: 'Ram Technical Supplies Ltd',
+      supplierSub: 'Reg. 512334186 · Petah Tikva', docNo: 'DN-1032', date: '18 Jul 2026', po: 'PO-8867',
+      vatRate: 0.085,
+      items: [
+        { name: 'PLC control panel model C200', qty: 2, price: 0 },
+        { name: 'Pressure sensor 0 to 10 bar', qty: 8, price: 0 },
+        { name: 'Shielded cable 4x1.5, 100m reel', qty: 4, price: 0 }
+      ],
+      footer: 'Goods received at warehouse: recipient signature on page 2',
+      conf: { supplier: 98, docNo: 97, date: 98, po: 95, units: 99 }
+    },
+    {
+      chip: 'Invoice missing a PO · Doron Metals',
+      type: 'invoice', typeLabel: 'TAX INVOICE', supplier: 'Doron Metals Ltd',
+      supplierSub: 'Reg. 513908220 · Acre', docNo: 'INV-90311', date: '21 Jul 2026', po: '',
+      vatRate: 0.085,
+      items: [
+        { name: 'Aluminum profile 40x40, 6m rod', qty: 30, price: 52.00 },
+        { name: 'Galvanized sheet 1.5mm, panel', qty: 10, price: 118.00 }
+      ],
+      footer: 'Note: partial delivery, remainder ships in August',
+      conf: { supplier: 97, docNo: 96, date: 98, subtotal: 97, vat: 98, total: 98 }
+    },
+    {
+      chip: 'Blurry scan · Carmel Electric and Controls',
+      type: 'invoice', typeLabel: 'TAX INVOICE', supplier: 'Carmel Electric and Controls',
+      supplierSub: 'Reg. 038112476 · Haifa', docNo: 'INV-5578', date: '25 Jul 2026', po: 'PO-8901',
+      vatRate: 0.085, messy: true, blurTotal: true, wrongTotal: 1194.77,
+      items: [
+        { name: 'Single phase motor 1.5 HP', qty: 2, price: 640.00 },
+        { name: 'Secondary electrical panel, assembled', qty: 1, price: 282.00 }
+      ],
+      footer: 'Customer copy · Scanned from a mobile device',
+      conf: { supplier: 95, docNo: 93, date: 88, po: 91, subtotal: 90, vat: 92, total: 61 }
+    }
+  ]
+};
+</script>
+<script src="/assets/js/demo-core.js"></script>
+<script src="/assets/js/demo-document-ai.js"></script>
+<script src="/assets/js/a11y-widget.js" defer></script>
+</body>
+</html>

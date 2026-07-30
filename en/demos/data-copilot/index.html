@@ -1,0 +1,221 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Demo: Data Copilot, Talk to Your Data | AL Solutions</title>
+<meta name="description" content="Interactive demo: a free language question about sales data, auto generated SQL, a chart and an answer grounded in the result. Synthetic data only.">
+<link rel="canonical" href="https://al-solutions.co.il/en/demos/data-copilot/">
+<link rel="alternate" hreflang="he" href="https://al-solutions.co.il/demos/data-copilot/">
+<link rel="alternate" hreflang="en" href="https://al-solutions.co.il/en/demos/data-copilot/">
+<link rel="alternate" hreflang="x-default" href="https://al-solutions.co.il/en/demos/data-copilot/">
+<meta property="og:type" content="website">
+<meta property="og:title" content="Demo: Data Copilot, Talk to Your Data">
+<meta property="og:description" content="A plain language question, visible SQL, a chart and a grounded answer. Synthetic data demo.">
+<meta property="og:url" content="https://al-solutions.co.il/en/demos/data-copilot/">
+<meta property="og:image" content="https://al-solutions.co.il/assets/img/og-en.png">
+<meta property="og:locale" content="en_US">
+<link rel="icon" href="/assets/img/favicon.ico" sizes="32x32">
+<link rel="icon" href="/assets/img/favicon-32.png" type="image/png" sizes="32x32">
+<link rel="icon" href="/assets/img/favicon-192.png" type="image/png" sizes="192x192">
+<link rel="apple-touch-icon" href="/assets/img/apple-touch-icon.png">
+<link rel="stylesheet" href="/assets/css/demos.css">
+<link rel="stylesheet" href="/assets/css/a11y-widget.css">
+</head>
+<body>
+<a class="skip-link" href="#main">Skip to content</a>
+
+<header class="demo-header">
+  <div class="container">
+    <a class="brand" href="/en/" aria-label="AL Solutions, home page">
+      <img src="/assets/img/logo-icon-on-dark.svg" alt="" width="122" height="100">
+      <span class="brand-name">Solutions</span>
+    </a>
+    <div class="header-links">
+      <span class="demo-badge"><span class="dot" aria-hidden="true"></span>Demo · Synthetic data</span>
+      <a href="/en/demos/">All demos</a>
+      <a href="/en/#contact">Talk to me</a>
+      <a class="lang-switch" href="/demos/data-copilot/" lang="he" hreflang="he">עברית</a>
+    </div>
+  </div>
+</header>
+
+<main id="main">
+  <section class="demo-hero">
+    <div class="container">
+      <span class="kicker">DATA COPILOTS</span>
+      <h1>A plain question, an answer from your data, no waiting for an analyst</h1>
+      <p class="sub">Pick a question about a fictional company's sales data. The copilot writes SQL, runs it read only, and returns a chart plus an answer grounded in the result. The query is always visible: you see exactly what was asked.</p>
+    </div>
+  </section>
+
+  <div class="container">
+    <div class="app-frame" dir="ltr">
+      <div class="app-bar">
+        <span class="app-name">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" aria-hidden="true"><path d="M4 20V10M10 20V4M16 20v-7"/><path d="M20 8l-3.5 3.5L14 9l-4 4"/></svg>
+          Data Copilot
+        </span>
+        <span class="app-badge">Demo environment · Fictional company: Northline Imports Ltd</span>
+      </div>
+      <div class="app-body" id="app-root"></div>
+    </div>
+  </div>
+
+  <section class="demo-explain">
+    <div class="container">
+      <h2>What is actually happening here</h2>
+      <div class="explain-grid">
+        <div class="explain-card">
+          <span class="num" aria-hidden="true">1</span>
+          <h3>From question to SQL</h3>
+          <p>A model that knows your schema translates the question into a query, shown in the open. No black box.</p>
+        </div>
+        <div class="explain-card">
+          <span class="num" aria-hidden="true">2</span>
+          <h3>Read only execution</h3>
+          <p>The copilot connects with read only permissions. It cannot change, delete or update anything.</p>
+        </div>
+        <div class="explain-card">
+          <span class="num" aria-hidden="true">3</span>
+          <h3>Grounded answers</h3>
+          <p>The numbers in the answer come from the query result, not the model's imagination. Not in the data, not in the answer.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="demo-stats">
+    <div class="container">
+      <h2>What makes this production grade</h2>
+      <div class="stats-grid">
+        <div class="stat-card"><span class="n">Visible SQL</span><span class="l">every answer ships with its query: verifiable, reproducible</span></div>
+        <div class="stat-card"><span class="n">Read only</span><span class="l">minimal permissions: the copilot never touches your data</span></div>
+        <div class="stat-card"><span class="n">Golden set</span><span class="l">in a real engagement accuracy is measured on your real questions before go live</span></div>
+      </div>
+      <p class="stats-note">The data in this demo is entirely invented. In real work the copilot connects to your DWH or ERP with proper permissions.</p>
+    </div>
+  </section>
+
+  <section class="demo-cta">
+    <div class="container">
+      <h2>Want to ask your data like this?</h2>
+      <p>A free 30 minute intro call. We map together which questions your team asks every week.</p>
+      <div class="cta-row">
+        <a class="btn btn-primary" href="https://wa.me/972502636703?text=Hi%2C%20I%20saw%20the%20Data%20Copilot%20demo%20and%20would%20like%20to%20hear%20more">Free intro call on WhatsApp</a>
+        <a class="btn btn-secondary" href="/en/demos/">More demos</a>
+      </div>
+    </div>
+  </section>
+</main>
+
+<footer class="demo-footer">
+  <div class="container">
+    <div class="flinks">
+      <a href="/en/">Home</a>
+      <a href="/en/privacy/">Privacy policy</a>
+      <a href="/en/accessibility/">Accessibility statement</a>
+      <a href="/demos/data-copilot/" lang="he" hreflang="he">עברית</a>
+    </div>
+    <p>© 2026 AL Solutions. All rights reserved. This demo uses synthetic data only.</p>
+  </div>
+</footer>
+
+<script>
+window.DEMO = {
+  lang: 'en', dir: 'ltr',
+  strings: {
+    chatTitle: 'Talk to the data',
+    aiName: 'Data Copilot',
+    hello: 'Hi! Ask me about the sales data of Northline Imports (a fictional company). I write SQL, run it read only, and answer only from the result. Pick a question below.',
+    inputPlaceholder: 'In the public demo, pick a prepared question below',
+    inputLabel: 'Question about the data',
+    send: 'Send',
+    schemaTitle: 'Database',
+    readOnly: 'Read only connection',
+    schemaMeta: 'The demo data is invented. Yours: a read only connection to your DWH, ERP or CRM, with proper permissions.',
+    writing: 'Writing a query...',
+    running: 'Running against the database...',
+    done: 'Done',
+    rows: n => n + (n === 1 ? ' row' : ' rows'),
+    sqlLabel: 'Generated SQL',
+    meta: 'Simulated run for illustration · in the live version: a real query against your data',
+    followup: 'Suggested follow up:',
+    pickQ: 'Pick a question:',
+    answered: 'Answer received'
+  },
+  tables: [
+    { name: 'orders', rows: '12,840 rows', cols: 'id, customer_id, region, order_date, due_date, total_usd, paid' },
+    { name: 'order_items', rows: '31,205 rows', cols: 'order_id, product_id, qty, unit_price' },
+    { name: 'products', rows: '1,120 rows', cols: 'id, name, category, supplier_id' },
+    { name: 'customers', rows: '486 rows', cols: 'id, name, city, credit_days' }
+  ],
+  qa: [
+    {
+      q: 'What were total sales last quarter, by region?',
+      sql: '<span class="kw">SELECT</span> region, <span class="kw">SUM</span>(total_usd) <span class="kw">AS</span> revenue\n<span class="kw">FROM</span> orders\n<span class="kw">WHERE</span> order_date <span class="kw">BETWEEN</span> <span class="str">\'2026-04-01\'</span> <span class="kw">AND</span> <span class="str">\'2026-06-30\'</span>\n<span class="kw">GROUP BY</span> region\n<span class="kw">ORDER BY</span> revenue <span class="kw">DESC</span>;',
+      kind: 'bar', rows: 3,
+      title: 'Q2 2026 sales by region',
+      data: [
+        { l: 'Central', v: 2310000, dv: '$2.31M' },
+        { l: 'North', v: 1420000, dv: '$1.42M' },
+        { l: 'South', v: 970000, dv: '$0.97M' }
+      ],
+      answer: 'The quarter closed at <strong>$4.7M</strong>. The Central region leads with <strong>$2.31M</strong>, nearly half of all sales. The South closed the quarter at $970K.',
+      followup: 1
+    },
+    {
+      q: 'What does the monthly sales trend look like this year?',
+      sql: '<span class="kw">SELECT</span> <span class="kw">DATE_TRUNC</span>(<span class="str">\'month\'</span>, order_date) <span class="kw">AS</span> m,\n       <span class="kw">SUM</span>(total_usd) / 1000 <span class="kw">AS</span> revenue_k\n<span class="kw">FROM</span> orders\n<span class="kw">WHERE</span> order_date >= <span class="str">\'2026-01-01\'</span>\n<span class="kw">GROUP BY</span> m <span class="kw">ORDER BY</span> m;',
+      kind: 'line', rows: 7,
+      title: 'Monthly sales 2026, $K',
+      data: [
+        { l: 'Jan', v: 640, dv: '$640K' },
+        { l: 'Feb', v: 712, dv: '$712K' },
+        { l: 'Mar', v: 758, dv: '$758K' },
+        { l: 'Apr', v: 689, dv: '$689K' },
+        { l: 'May', v: 810, dv: '$810K' },
+        { l: 'Jun', v: 842, dv: '$842K' },
+        { l: 'Jul', v: 905, dv: '$905K' }
+      ],
+      answer: 'A clear upward trend: from <strong>$640K</strong> in January to <strong>$905K</strong> in July, a <strong>41%</strong> rise. The one dip is April, which matches the Passover holiday week.',
+      followup: 2
+    },
+    {
+      q: 'Which five products sold the most this month?',
+      sql: '<span class="kw">SELECT</span> p.name, <span class="kw">SUM</span>(oi.qty * oi.unit_price) <span class="kw">AS</span> revenue\n<span class="kw">FROM</span> order_items oi\n<span class="kw">JOIN</span> products p <span class="kw">ON</span> p.id = oi.product_id\n<span class="kw">JOIN</span> orders o <span class="kw">ON</span> o.id = oi.order_id\n<span class="kw">WHERE</span> o.order_date >= <span class="str">\'2026-07-01\'</span>\n<span class="kw">GROUP BY</span> p.name <span class="kw">ORDER BY</span> revenue <span class="kw">DESC</span> <span class="kw">LIMIT</span> 5;',
+      kind: 'hbar', rows: 5,
+      title: 'Top five products, July 2026',
+      data: [
+        { l: 'Industrial bearings', v: 172000, dv: '$172K' },
+        { l: 'Electric motors', v: 141000, dv: '$141K' },
+        { l: 'Cables and conductors', v: 112000, dv: '$112K' },
+        { l: 'Programmable controllers', v: 82000, dv: '$82K' },
+        { l: 'Oils and lubricants', v: 54000, dv: '$54K' }
+      ],
+      answer: 'The top five account for <strong>62%</strong> of July sales: <strong>$561K</strong> out of the $905K in the trend above. Industrial bearings lead with <strong>$172K</strong>.',
+      followup: 3
+    },
+    {
+      q: 'Which customers have open debt, and who is overdue?',
+      sql: '<span class="kw">SELECT</span> c.name, <span class="kw">SUM</span>(o.total_usd) <span class="kw">AS</span> open_debt,\n       <span class="kw">MAX</span>(<span class="kw">CURRENT_DATE</span> - o.due_date) <span class="kw">AS</span> days_overdue\n<span class="kw">FROM</span> orders o <span class="kw">JOIN</span> customers c <span class="kw">ON</span> c.id = o.customer_id\n<span class="kw">WHERE</span> o.paid = <span class="kw">FALSE</span>\n<span class="kw">GROUP BY</span> c.name <span class="kw">ORDER BY</span> open_debt <span class="kw">DESC</span>;',
+      kind: 'table', rows: 4,
+      title: 'Open debt by customer',
+      cols: ['Customer', 'Open debt', 'Days past terms'],
+      data: [
+        { cells: ['Ashdod Steel Works', '$184,300', '<span class="pill pill-green">Within terms</span>'] },
+        { cells: ['Techno-Mechanics Holon', '$126,750', '<span class="pill pill-amber"><svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" aria-hidden="true"><path d="M12 9v4M12 17h.01M10.3 3.9 1.8 18a2 2 0 0 0 1.7 3h17a2 2 0 0 0 1.7-3L13.7 3.9a2 2 0 0 0-3.4 0z"/></svg>Overdue: 41 days</span>'] },
+        { cells: ['KM Engineering Ltd', '$67,200', '<span class="pill pill-green">Within terms</span>'] },
+        { cells: ['Electro-South', '$45,900', '<span class="pill pill-green">Within terms</span>'] }
+      ],
+      answer: 'The largest debt belongs to <strong>Ashdod Steel Works ($184K)</strong>, but it is within payment terms. The attention should go to <strong>Techno-Mechanics Holon</strong>: $127K, 41 days overdue.',
+      followup: null
+    }
+  ]
+};
+</script>
+<script src="/assets/js/demo-core.js"></script>
+<script src="/assets/js/demo-data-copilot.js"></script>
+<script src="/assets/js/a11y-widget.js" defer></script>
+</body>
+</html>

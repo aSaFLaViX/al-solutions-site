@@ -29,4 +29,76 @@
     <loc>https://al-solutions.co.il/en/accessibility/</loc>
     <lastmod>2026-07-21</lastmod>
   </url>
+  <url>
+    <loc>https://al-solutions.co.il/demos/</loc>
+    <xhtml:link rel="alternate" hreflang="he" href="https://al-solutions.co.il/demos/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://al-solutions.co.il/en/demos/"/>
+    <lastmod>2026-07-30</lastmod>
+  </url>
+  <url>
+    <loc>https://al-solutions.co.il/en/demos/</loc>
+    <xhtml:link rel="alternate" hreflang="he" href="https://al-solutions.co.il/demos/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://al-solutions.co.il/en/demos/"/>
+    <lastmod>2026-07-30</lastmod>
+  </url>
+  <url>
+    <loc>https://al-solutions.co.il/demos/document-ai/</loc>
+    <xhtml:link rel="alternate" hreflang="he" href="https://al-solutions.co.il/demos/document-ai/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://al-solutions.co.il/en/demos/document-ai/"/>
+    <lastmod>2026-07-30</lastmod>
+  </url>
+  <url>
+    <loc>https://al-solutions.co.il/en/demos/document-ai/</loc>
+    <xhtml:link rel="alternate" hreflang="he" href="https://al-solutions.co.il/demos/document-ai/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://al-solutions.co.il/en/demos/document-ai/"/>
+    <lastmod>2026-07-30</lastmod>
+  </url>
+  <url>
+    <loc>https://al-solutions.co.il/demos/rag-assistant/</loc>
+    <xhtml:link rel="alternate" hreflang="he" href="https://al-solutions.co.il/demos/rag-assistant/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://al-solutions.co.il/en/demos/rag-assistant/"/>
+    <lastmod>2026-07-30</lastmod>
+  </url>
+  <url>
+    <loc>https://al-solutions.co.il/en/demos/rag-assistant/</loc>
+    <xhtml:link rel="alternate" hreflang="he" href="https://al-solutions.co.il/demos/rag-assistant/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://al-solutions.co.il/en/demos/rag-assistant/"/>
+    <lastmod>2026-07-30</lastmod>
+  </url>
+  <url>
+    <loc>https://al-solutions.co.il/demos/data-copilot/</loc>
+    <xhtml:link rel="alternate" hreflang="he" href="https://al-solutions.co.il/demos/data-copilot/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://al-solutions.co.il/en/demos/data-copilot/"/>
+    <lastmod>2026-07-30</lastmod>
+  </url>
+  <url>
+    <loc>https://al-solutions.co.il/en/demos/data-copilot/</loc>
+    <xhtml:link rel="alternate" hreflang="he" href="https://al-solutions.co.il/demos/data-copilot/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://al-solutions.co.il/en/demos/data-copilot/"/>
+    <lastmod>2026-07-30</lastmod>
+  </url>
+  <url>
+    <loc>https://al-solutions.co.il/demos/agentic-triage/</loc>
+    <xhtml:link rel="alternate" hreflang="he" href="https://al-solutions.co.il/demos/agentic-triage/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://al-solutions.co.il/en/demos/agentic-triage/"/>
+    <lastmod>2026-07-30</lastmod>
+  </url>
+  <url>
+    <loc>https://al-solutions.co.il/en/demos/agentic-triage/</loc>
+    <xhtml:link rel="alternate" hreflang="he" href="https://al-solutions.co.il/demos/agentic-triage/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://al-solutions.co.il/en/demos/agentic-triage/"/>
+    <lastmod>2026-07-30</lastmod>
+  </url>
+  <url>
+    <loc>https://al-solutions.co.il/demos/computer-vision/</loc>
+    <xhtml:link rel="alternate" hreflang="he" href="https://al-solutions.co.il/demos/computer-vision/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://al-solutions.co.il/en/demos/computer-vision/"/>
+    <lastmod>2026-07-30</lastmod>
+  </url>
+  <url>
+    <loc>https://al-solutions.co.il/en/demos/computer-vision/</loc>
+    <xhtml:link rel="alternate" hreflang="he" href="https://al-solutions.co.il/demos/computer-vision/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://al-solutions.co.il/en/demos/computer-vision/"/>
+    <lastmod>2026-07-30</lastmod>
+  </url>
 </urlset>

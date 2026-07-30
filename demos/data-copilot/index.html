@@ -1,0 +1,221 @@
+<!DOCTYPE html>
+<html lang="he" dir="rtl">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>דמו: Data Copilot, לדבר עם הנתונים | AL Solutions</title>
+<meta name="description" content="דמו אינטראקטיבי: שאלה בשפה חופשית על נתוני מכירות, SQL שנוצר אוטומטית, גרף ותשובה מעוגנת בתוצאה. נתונים סינתטיים בלבד.">
+<link rel="canonical" href="https://al-solutions.co.il/demos/data-copilot/">
+<link rel="alternate" hreflang="he" href="https://al-solutions.co.il/demos/data-copilot/">
+<link rel="alternate" hreflang="en" href="https://al-solutions.co.il/en/demos/data-copilot/">
+<link rel="alternate" hreflang="x-default" href="https://al-solutions.co.il/en/demos/data-copilot/">
+<meta property="og:type" content="website">
+<meta property="og:title" content="דמו: Data Copilot, לדבר עם הנתונים">
+<meta property="og:description" content="שאלה בעברית, SQL גלוי, גרף ותשובה מעוגנת בנתונים. דמו עם נתונים סינתטיים.">
+<meta property="og:url" content="https://al-solutions.co.il/demos/data-copilot/">
+<meta property="og:image" content="https://al-solutions.co.il/assets/img/og-he.png">
+<meta property="og:locale" content="he_IL">
+<link rel="icon" href="/assets/img/favicon.ico" sizes="32x32">
+<link rel="icon" href="/assets/img/favicon-32.png" type="image/png" sizes="32x32">
+<link rel="icon" href="/assets/img/favicon-192.png" type="image/png" sizes="192x192">
+<link rel="apple-touch-icon" href="/assets/img/apple-touch-icon.png">
+<link rel="stylesheet" href="/assets/css/demos.css">
+<link rel="stylesheet" href="/assets/css/a11y-widget.css">
+</head>
+<body>
+<a class="skip-link" href="#main">דילוג לתוכן</a>
+
+<header class="demo-header">
+  <div class="container">
+    <a class="brand" href="/" aria-label="AL Solutions, דף הבית">
+      <img src="/assets/img/logo-icon-on-dark.svg" alt="" width="122" height="100">
+      <span class="brand-name">Solutions</span>
+    </a>
+    <div class="header-links">
+      <span class="demo-badge"><span class="dot" aria-hidden="true"></span>דמו · נתונים סינתטיים</span>
+      <a href="/demos/">כל הדמואים</a>
+      <a href="/#contact">דברו איתי</a>
+      <a class="lang-switch" href="/en/demos/data-copilot/" lang="en" hreflang="en">EN</a>
+    </div>
+  </div>
+</header>
+
+<main id="main">
+  <section class="demo-hero">
+    <div class="container">
+      <span class="kicker">Data Copilots</span>
+      <h1>שאלה בעברית, תשובה מהדאטה, בלי לחכות לאנליסט</h1>
+      <p class="sub">בחרו שאלה על נתוני המכירות של חברה פיקטיבית. ה-Copilot מנסח SQL, מריץ אותו בהרשאת קריאה בלבד, ומחזיר גרף ותשובה שמעוגנת בתוצאה. השאילתה גלויה תמיד: רואים בדיוק מה רץ מול הנתונים.</p>
+    </div>
+  </section>
+
+  <div class="container">
+    <div class="app-frame" dir="rtl">
+      <div class="app-bar">
+        <span class="app-name">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" aria-hidden="true"><path d="M4 20V10M10 20V4M16 20v-7"/><path d="M20 8l-3.5 3.5L14 9l-4 4"/></svg>
+          Data Copilot
+        </span>
+        <span class="app-badge">סביבת דמו · חברה פיקטיבית: יבוא הצפון בע"מ</span>
+      </div>
+      <div class="app-body" id="app-root"></div>
+    </div>
+  </div>
+
+  <section class="demo-explain">
+    <div class="container">
+      <h2>מה קורה כאן בעצם</h2>
+      <div class="explain-grid">
+        <div class="explain-card">
+          <span class="num" aria-hidden="true">1</span>
+          <h3>מהשאלה ל-SQL</h3>
+          <p>מודל שמכיר את סכמת הנתונים שלכם מתרגם את השאלה לשאילתה, והיא מוצגת בגלוי. אין קופסה שחורה.</p>
+        </div>
+        <div class="explain-card">
+          <span class="num" aria-hidden="true">2</span>
+          <h3>הרצה בקריאה בלבד</h3>
+          <p>ה-Copilot מחובר עם הרשאות קריאה בלבד. הוא לא יכול לשנות, למחוק או לעדכן שום דבר.</p>
+        </div>
+        <div class="explain-card">
+          <span class="num" aria-hidden="true">3</span>
+          <h3>תשובה מעוגנת</h3>
+          <p>המספרים בתשובה מגיעים מתוצאת השאילתה, לא מהדמיון של המודל. מה שלא בנתונים, לא בתשובה.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="demo-stats">
+    <div class="container">
+      <h2>מה הופך את זה למערכת רצינית</h2>
+      <div class="stats-grid">
+        <div class="stat-card"><span class="n">SQL גלוי</span><span class="l">כל תשובה מגיעה עם השאילתה שלה: אפשר לאמת, אפשר לשחזר</span></div>
+        <div class="stat-card"><span class="n">קריאה בלבד</span><span class="l">הרשאות מינימליות: ה-Copilot לא נוגע בנתונים</span></div>
+        <div class="stat-card"><span class="n">גולדן דאטה סט</span><span class="l">בפרויקט אמיתי הדיוק נמדד על שאלות אמת שלכם, לפני עלייה לאוויר</span></div>
+      </div>
+      <p class="stats-note">הנתונים בדמו מומצאים לחלוטין. בעבודה אמיתית ה-Copilot מתחבר ל-DWH או ל-ERP שלכם, עם הרשאות מסודרות.</p>
+    </div>
+  </section>
+
+  <section class="demo-cta">
+    <div class="container">
+      <h2>רוצים לשאול ככה את הנתונים שלכם?</h2>
+      <p>שיחת היכרות של 30 דקות, בלי התחייבות. ממפים יחד אילו שאלות הצוות שלכם שואל כל שבוע.</p>
+      <div class="cta-row">
+        <a class="btn btn-primary" href="https://wa.me/972502636703?text=%D7%94%D7%99%D7%99%2C%20%D7%A8%D7%90%D7%99%D7%AA%D7%99%20%D7%90%D7%AA%20%D7%94%D7%93%D7%9E%D7%95%20%D7%A9%D7%9C%20%D7%94-Data%20Copilot%20%D7%95%D7%90%D7%A9%D7%9E%D7%97%20%D7%9C%D7%A9%D7%9E%D7%95%D7%A2%20%D7%A2%D7%95%D7%93">שיחת היכרות חינם ב-WhatsApp</a>
+        <a class="btn btn-secondary" href="/demos/">לשאר הדמואים</a>
+      </div>
+    </div>
+  </section>
+</main>
+
+<footer class="demo-footer">
+  <div class="container">
+    <div class="flinks">
+      <a href="/">דף הבית</a>
+      <a href="/privacy/">מדיניות פרטיות</a>
+      <a href="/accessibility/">הצהרת נגישות</a>
+      <a href="/en/demos/data-copilot/" lang="en" hreflang="en">English</a>
+    </div>
+    <p>© 2026 AL Solutions. כל הזכויות שמורות. הדמו משתמש בנתונים סינתטיים בלבד.</p>
+  </div>
+</footer>
+
+<script>
+window.DEMO = {
+  lang: 'he', dir: 'rtl',
+  strings: {
+    chatTitle: 'שיחה עם הדאטה',
+    aiName: 'Data Copilot',
+    hello: 'שלום! שאלו אותי על נתוני המכירות של יבוא הצפון (חברה פיקטיבית). אני כותב SQL, מריץ בקריאה בלבד, ועונה רק מהתוצאה. בחרו שאלה למטה.',
+    inputPlaceholder: 'בדמו הציבורי בוחרים שאלה מוכנה למטה',
+    inputLabel: 'שאלה על הנתונים',
+    send: 'שליחה',
+    schemaTitle: 'בסיס הנתונים',
+    readOnly: 'חיבור בהרשאת קריאה בלבד',
+    schemaMeta: 'הנתונים בדמו מומצאים. אצלכם: חיבור בהרשאת קריאה בלבד ל-DWH, ל-ERP או ל-CRM, עם הרשאות מסודרות.',
+    writing: 'מנסח שאילתה...',
+    running: 'מריץ מול בסיס הנתונים...',
+    done: 'הושלם',
+    rows: n => n === 1 ? 'שורה אחת' : n + ' שורות',
+    sqlLabel: 'SQL שנוצר',
+    meta: 'הרצה מדומה להמחשה · בגרסה אמיתית: שאילתה חיה מול הנתונים שלכם',
+    followup: 'שאלת המשך מוצעת:',
+    pickQ: 'בחרו שאלה:',
+    answered: 'התקבלה תשובה'
+  },
+  tables: [
+    { name: 'orders', rows: '12,840 שורות', cols: 'id, customer_id, region, order_date, due_date, total_ils, paid' },
+    { name: 'order_items', rows: '31,205 שורות', cols: 'order_id, product_id, qty, unit_price' },
+    { name: 'products', rows: '1,120 שורות', cols: 'id, name, category, supplier_id' },
+    { name: 'customers', rows: '486 שורות', cols: 'id, name, city, credit_days' }
+  ],
+  qa: [
+    {
+      q: 'מה סך המכירות ברבעון האחרון, לפי אזור?',
+      sql: '<span class="kw">SELECT</span> region, <span class="kw">SUM</span>(total_ils) <span class="kw">AS</span> revenue\n<span class="kw">FROM</span> orders\n<span class="kw">WHERE</span> order_date <span class="kw">BETWEEN</span> <span class="str">\'2026-04-01\'</span> <span class="kw">AND</span> <span class="str">\'2026-06-30\'</span>\n<span class="kw">GROUP BY</span> region\n<span class="kw">ORDER BY</span> revenue <span class="kw">DESC</span>;',
+      kind: 'bar', rows: 3,
+      title: 'מכירות Q2 2026 לפי אזור',
+      data: [
+        { l: 'מרכז', v: 2310000, dv: '2.31M ₪' },
+        { l: 'צפון', v: 1420000, dv: '1.42M ₪' },
+        { l: 'דרום', v: 970000, dv: '0.97M ₪' }
+      ],
+      answer: 'הרבעון הסתכם ב-<strong>4.7 מיליון ₪</strong>. אזור המרכז מוביל עם <strong>2.31 מיליון</strong>, כמעט מחצית מהמכירות. הדרום סגר את הרבעון עם 970 אלף.',
+      followup: 1
+    },
+    {
+      q: 'איך נראית מגמת המכירות החודשית השנה?',
+      sql: '<span class="kw">SELECT</span> <span class="kw">DATE_TRUNC</span>(<span class="str">\'month\'</span>, order_date) <span class="kw">AS</span> m,\n       <span class="kw">SUM</span>(total_ils) / 1000 <span class="kw">AS</span> revenue_k\n<span class="kw">FROM</span> orders\n<span class="kw">WHERE</span> order_date >= <span class="str">\'2026-01-01\'</span>\n<span class="kw">GROUP BY</span> m <span class="kw">ORDER BY</span> m;',
+      kind: 'line', rows: 7,
+      title: 'מכירות חודשיות 2026, אלפי ₪',
+      data: [
+        { l: 'ינו', v: 640, dv: '640K ₪' },
+        { l: 'פבר', v: 712, dv: '712K ₪' },
+        { l: 'מרץ', v: 758, dv: '758K ₪' },
+        { l: 'אפר', v: 689, dv: '689K ₪' },
+        { l: 'מאי', v: 810, dv: '810K ₪' },
+        { l: 'יוני', v: 842, dv: '842K ₪' },
+        { l: 'יולי', v: 905, dv: '905K ₪' }
+      ],
+      answer: 'מגמת עלייה ברורה: מ-<strong>640 אלף ₪</strong> בינואר ל-<strong>905 אלף</strong> ביולי, עלייה של <strong>41%</strong>. הירידה היחידה היא באפריל, והיא תואמת את שבוע חופשת פסח.',
+      followup: 2
+    },
+    {
+      q: 'אילו חמישה מוצרים נמכרו הכי הרבה החודש?',
+      sql: '<span class="kw">SELECT</span> p.name, <span class="kw">SUM</span>(oi.qty * oi.unit_price) <span class="kw">AS</span> revenue\n<span class="kw">FROM</span> order_items oi\n<span class="kw">JOIN</span> products p <span class="kw">ON</span> p.id = oi.product_id\n<span class="kw">JOIN</span> orders o <span class="kw">ON</span> o.id = oi.order_id\n<span class="kw">WHERE</span> o.order_date >= <span class="str">\'2026-07-01\'</span>\n<span class="kw">GROUP BY</span> p.name <span class="kw">ORDER BY</span> revenue <span class="kw">DESC</span> <span class="kw">LIMIT</span> 5;',
+      kind: 'hbar', rows: 5,
+      title: 'חמשת המוצרים המובילים, יולי 2026',
+      data: [
+        { l: 'מסבים תעשייתיים', v: 172000, dv: '172K ₪' },
+        { l: 'מנועים חשמליים', v: 141000, dv: '141K ₪' },
+        { l: 'כבלים ומוליכים', v: 112000, dv: '112K ₪' },
+        { l: 'בקרים מתוכנתים', v: 82000, dv: '82K ₪' },
+        { l: 'שמנים וחומרי סיכה', v: 54000, dv: '54K ₪' }
+      ],
+      answer: 'חמשת המובילים אחראים ל-<strong>62%</strong> ממכירות יולי: <strong>561 אלף ₪</strong> מתוך 905 אלף שראיתם בגרף המגמה. מסבים תעשייתיים בראש עם <strong>172 אלף ₪</strong>.',
+      followup: 3
+    },
+    {
+      q: 'לאילו לקוחות יש חוב פתוח, ומי באיחור?',
+      sql: '<span class="kw">SELECT</span> c.name, <span class="kw">SUM</span>(o.total_ils) <span class="kw">AS</span> open_debt,\n       <span class="kw">MAX</span>(<span class="kw">CURRENT_DATE</span> - o.due_date) <span class="kw">AS</span> days_overdue\n<span class="kw">FROM</span> orders o <span class="kw">JOIN</span> customers c <span class="kw">ON</span> c.id = o.customer_id\n<span class="kw">WHERE</span> o.paid = <span class="kw">FALSE</span>\n<span class="kw">GROUP BY</span> c.name <span class="kw">ORDER BY</span> open_debt <span class="kw">DESC</span>;',
+      kind: 'table', rows: 4,
+      title: 'חובות פתוחים לפי לקוח',
+      cols: ['לקוח', 'חוב פתוח', 'סטטוס מול תנאי התשלום'],
+      data: [
+        { cells: ['מפעלי פלדה אשדוד', '184,300 ₪', '<span class="pill pill-green">בטווח</span>'] },
+        { cells: ['טכנו-מכניקה חולון', '126,750 ₪', '<span class="pill pill-amber"><svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" aria-hidden="true"><path d="M12 9v4M12 17h.01M10.3 3.9 1.8 18a2 2 0 0 0 1.7 3h17a2 2 0 0 0 1.7-3L13.7 3.9a2 2 0 0 0-3.4 0z"/></svg>איחור של 41 יום</span>'] },
+        { cells: ['ק.מ הנדסה בע"מ', '67,200 ₪', '<span class="pill pill-green">בטווח</span>'] },
+        { cells: ['אלקטרו-דרום', '45,900 ₪', '<span class="pill pill-green">בטווח</span>'] }
+      ],
+      answer: 'החוב הגדול ביותר שייך ל<strong>מפעלי פלדה אשדוד (184 אלף ₪)</strong>, אבל הוא בתוך תנאי התשלום. תשומת הלב צריכה להיות ב<strong>טכנו-מכניקה חולון</strong>: 127 אלף ₪ באיחור של 41 יום.',
+      followup: null
+    }
+  ]
+};
+</script>
+<script src="/assets/js/demo-core.js"></script>
+<script src="/assets/js/demo-data-copilot.js"></script>
+<script src="/assets/js/a11y-widget.js" defer></script>
+</body>
+</html>

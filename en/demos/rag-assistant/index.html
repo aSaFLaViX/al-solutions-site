@@ -1,0 +1,208 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Demo: RAG Knowledge Assistant with Citations | AL Solutions</title>
+<meta name="description" content="Interactive demo: a knowledge assistant that answers only from company documents, with a clickable source citation per answer, and an explicit refusal when there is no source. Synthetic data only.">
+<link rel="canonical" href="https://al-solutions.co.il/en/demos/rag-assistant/">
+<link rel="alternate" hreflang="he" href="https://al-solutions.co.il/demos/rag-assistant/">
+<link rel="alternate" hreflang="en" href="https://al-solutions.co.il/en/demos/rag-assistant/">
+<link rel="alternate" hreflang="x-default" href="https://al-solutions.co.il/en/demos/rag-assistant/">
+<meta property="og:type" content="website">
+<meta property="og:title" content="Demo: RAG Knowledge Assistant with Citations">
+<meta property="og:description" content="Every answer carries a clickable source. No source? No answer. Synthetic data demo.">
+<meta property="og:url" content="https://al-solutions.co.il/en/demos/rag-assistant/">
+<meta property="og:image" content="https://al-solutions.co.il/assets/img/og-en.png">
+<meta property="og:locale" content="en_US">
+<link rel="icon" href="/assets/img/favicon.ico" sizes="32x32">
+<link rel="icon" href="/assets/img/favicon-32.png" type="image/png" sizes="32x32">
+<link rel="icon" href="/assets/img/favicon-192.png" type="image/png" sizes="192x192">
+<link rel="apple-touch-icon" href="/assets/img/apple-touch-icon.png">
+<link rel="stylesheet" href="/assets/css/demos.css">
+<link rel="stylesheet" href="/assets/css/a11y-widget.css">
+</head>
+<body>
+<a class="skip-link" href="#main">Skip to content</a>
+
+<header class="demo-header">
+  <div class="container">
+    <a class="brand" href="/en/" aria-label="AL Solutions, home page">
+      <img src="/assets/img/logo-icon-on-dark.svg" alt="" width="122" height="100">
+      <span class="brand-name">Solutions</span>
+    </a>
+    <div class="header-links">
+      <span class="demo-badge"><span class="dot" aria-hidden="true"></span>Demo · Synthetic data</span>
+      <a href="/en/demos/">All demos</a>
+      <a href="/en/#contact">Talk to me</a>
+      <a class="lang-switch" href="/demos/rag-assistant/" lang="he" hreflang="he">עברית</a>
+    </div>
+  </div>
+</header>
+
+<main id="main">
+  <section class="demo-hero">
+    <div class="container">
+      <span class="kicker">RAG ASSISTANTS</span>
+      <h1>A knowledge assistant that does not make things up</h1>
+      <p class="sub">The assistant answers only from fictional company policies. Pick a question, get an answer with a clickable source citation, and try the question that has no answer in the documents: that is where a serious assistant differs from a guessing chatbot.</p>
+    </div>
+  </section>
+
+  <div class="container">
+    <div class="app-frame" dir="ltr">
+      <div class="app-bar">
+        <span class="app-name">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" aria-hidden="true"><path d="M8 3h9a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2H8"/><path d="M5 3v18"/><path d="M11 8h5M11 12h5M11 16h3"/></svg>
+          Company Knowledge Assistant
+        </span>
+        <span class="app-badge">Demo environment · Fictional company: Northline Imports Ltd</span>
+      </div>
+      <div class="app-body" id="app-root"></div>
+    </div>
+  </div>
+
+  <section class="demo-explain">
+    <div class="container">
+      <h2>What is actually happening here</h2>
+      <div class="explain-grid">
+        <div class="explain-card">
+          <span class="num" aria-hidden="true">1</span>
+          <h3>Retrieve before answering</h3>
+          <p>The question is not sent into thin air. The system first retrieves the relevant passages from the organization's documents.</p>
+        </div>
+        <div class="explain-card">
+          <span class="num" aria-hidden="true">2</span>
+          <h3>Answers with citations</h3>
+          <p>Every claim in the answer is backed by a clickable source. Click the number and see exactly where it came from.</p>
+        </div>
+        <div class="explain-card">
+          <span class="num" aria-hidden="true">3</span>
+          <h3>No source? No answer</h3>
+          <p>A question with no coverage in the documents gets an explicit refusal and a route to a human. No hallucinations, no guessing.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="demo-stats">
+    <div class="container">
+      <h2>What makes this production grade</h2>
+      <div class="stats-grid">
+        <div class="stat-card"><span class="n">100%</span><span class="l">of answers carry a clickable source, or an explicit refusal</span></div>
+        <div class="stat-card"><span class="n">0</span><span class="l">guessed answers: what is not in the documents is not answered</span></div>
+        <div class="stat-card"><span class="n">Golden set</span><span class="l">in a real engagement the assistant is measured on your real questions before go live</span></div>
+      </div>
+      <p class="stats-note">The policies in this demo are invented. In real work the assistant connects to your documents, with access controls and proper accuracy measurement.</p>
+    </div>
+  </section>
+
+  <section class="demo-cta">
+    <div class="container">
+      <h2>Want this on your organization's knowledge?</h2>
+      <p>A free 30 minute intro call. We map together which knowledge is worth making accessible like this.</p>
+      <div class="cta-row">
+        <a class="btn btn-primary" href="https://wa.me/972502636703?text=Hi%2C%20I%20saw%20the%20RAG%20assistant%20demo%20and%20would%20like%20to%20hear%20more">Free intro call on WhatsApp</a>
+        <a class="btn btn-secondary" href="/en/demos/">More demos</a>
+      </div>
+    </div>
+  </section>
+</main>
+
+<footer class="demo-footer">
+  <div class="container">
+    <div class="flinks">
+      <a href="/en/">Home</a>
+      <a href="/en/privacy/">Privacy policy</a>
+      <a href="/en/accessibility/">Accessibility statement</a>
+      <a href="/demos/rag-assistant/" lang="he" hreflang="he">עברית</a>
+    </div>
+    <p>© 2026 AL Solutions. All rights reserved. This demo uses synthetic data only.</p>
+  </div>
+</footer>
+
+<script>
+window.DEMO = {
+  lang: 'en', dir: 'ltr',
+  strings: {
+    chatTitle: 'Conversation',
+    aiName: 'Knowledge Assistant',
+    hello: 'Hi! I answer only from company policies, and every answer carries a source. Pick a question from the list below.',
+    inputPlaceholder: 'In the public demo, pick a prepared question below',
+    inputLabel: 'Question for the knowledge assistant',
+    send: 'Send',
+    corpusTitle: 'Knowledge base',
+    corpusMeta: 'The demo index: 4 documents, 118 chunks. Yours: the full organizational knowledge base, with access controls.',
+    retrievedTitle: 'Retrieved passages',
+    pickQ: 'Pick a question:',
+    searching: 'Retrieving from documents...',
+    meta: n => (n === 1 ? '1 source retrieved' : n + ' sources retrieved') + ' · click a source number in the answer to see the quote',
+    answered: 'Answer received',
+    guardPill: 'Out of scope',
+    guardTitle: 'No source, no answer',
+    noneTitle: 'No relevant passages found',
+    noneBody: 'The search ran across all 118 chunks and returned nothing above the relevance threshold. No source, no answer.',
+    allDone: 'You have been through all the demo questions. In the live version you ask freely, on your documents.'
+  },
+  sources: [
+    { title: 'Procurement and Supplier Policy', meta: '14 pages' },
+    { title: 'Returns and Credits Policy', meta: '6 pages' },
+    { title: 'Warehouse Safety Manual', meta: '11 pages' },
+    { title: 'New Employee Onboarding Guide', meta: '9 pages' }
+  ],
+  qa: [
+    {
+      q: 'What is the approval flow for purchase orders above $20,000?',
+      a: 'Per the procurement policy, an order above $20,000 before tax requires dual approval: the procurement manager and the CFO <button class="cite" data-c="0" type="button" aria-label="source 1">1</button>. If one approver is unavailable for more than three business days, their designated deputy may approve instead, documented in the order notes <button class="cite" data-c="1" type="button" aria-label="source 2">2</button>.',
+      cites: [
+        { doc: 'Procurement Policy', section: 'Section 4.2', quote: 'An order exceeding $20,000 before tax requires <mark>dual approval: the procurement manager and the CFO</mark>, routed for approval within two business days.' },
+        { doc: 'Procurement Policy', section: 'Section 4.5', quote: 'If an approver is absent for more than three business days, <mark>their designated deputy may approve</mark>, subject to documentation in the order notes.' }
+      ]
+    },
+    {
+      q: 'How long do we have to report damaged goods to a supplier?',
+      a: 'A visible defect found at goods receipt must be reported to the supplier within five business days, with photo documentation <button class="cite" data-c="0" type="button" aria-label="source 1">1</button>. A hidden defect can be reported up to 30 days from receipt <button class="cite" data-c="1" type="button" aria-label="source 2">2</button>.',
+      cites: [
+        { doc: 'Returns Policy', section: 'Section 2.1', quote: 'A defect discovered at goods receipt shall be reported to the supplier <mark>within 5 business days</mark> of delivery, with photo documentation.' },
+        { doc: 'Returns Policy', section: 'Section 2.4', quote: 'A hidden defect that could not be found by reasonable inspection may be reported <mark>up to 30 days from receipt</mark>, subject to supplier verification.' }
+      ]
+    },
+    {
+      q: 'What certifications does a forklift operator need?',
+      a: 'Forklift operation is allowed only for employees holding a valid operator license, after at least 8 hours of internal onboarding <button class="cite" data-c="0" type="button" aria-label="source 1">1</button>. The manual also mandates an annual safety refresher <button class="cite" data-c="1" type="button" aria-label="source 2">2</button>.',
+      cites: [
+        { doc: 'Warehouse Safety Manual', section: 'Section 7.3', quote: 'Forklift operation is permitted only for employees holding a <mark>valid operator license</mark> and after <mark>at least 8 hours of supervised internal onboarding</mark>.' },
+        { doc: 'Warehouse Safety Manual', section: 'Section 7.6', quote: 'Every forklift operator shall complete an <mark>annual safety refresher</mark>; operators who miss the deadline have their authorization suspended.' }
+      ]
+    },
+    {
+      q: 'What does a new employee receive on day one?',
+      a: 'On the first day the employee receives an access badge, system accounts and a personal mentor, and an intro meeting is scheduled with the department manager <button class="cite" data-c="0" type="button" aria-label="source 1">1</button>.',
+      cites: [
+        { doc: 'Onboarding Guide', section: 'Chapter 1', quote: 'On their first day the employee is assigned an <mark>access badge, system accounts and a personal mentor</mark>, and an intro meeting is scheduled with the department manager.' }
+      ]
+    },
+    {
+      q: 'Can we split an order in two to stay under the approval threshold?',
+      a: 'No. The procurement policy forbids it explicitly: splitting orders to bypass approval thresholds is treated as a policy violation <button class="cite" data-c="0" type="button" aria-label="source 1">1</button>. If there is a genuine operational need to split, written CFO pre-approval is required.',
+      cites: [
+        { doc: 'Procurement Policy', section: 'Section 4.7', quote: '<mark>Splitting orders with the intent of bypassing approval thresholds is explicitly forbidden</mark> and is handled as a policy violation. Exceptions require written CFO pre-approval.' }
+      ]
+    },
+    {
+      q: 'What is the executive bonus policy?',
+      a: 'I cannot answer that: the information does not exist in the documents I am allowed to access, and I do not guess.',
+      cites: [],
+      guard: true,
+      guardWhy: 'The assistant answers only from approved documents, and only when a source is found. When there is none, it says so explicitly and routes to a human.',
+      guardCta: 'Open an HR ticket',
+      guardDone: 'Ticket HR-2049 created (simulated)'
+    }
+  ]
+};
+</script>
+<script src="/assets/js/demo-core.js"></script>
+<script src="/assets/js/demo-rag.js"></script>
+<script src="/assets/js/a11y-widget.js" defer></script>
+</body>
+</html>

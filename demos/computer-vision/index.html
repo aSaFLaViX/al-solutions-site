@@ -1,0 +1,230 @@
+<!DOCTYPE html>
+<html lang="he" dir="rtl">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>דמו: ראייה ממוחשבת לבקרת סחורה נכנסת | AL Solutions</title>
+<meta name="description" content="דמו אינטראקטיבי: מצלמה אחת במזח הקבלה מזהה משטחים וקרטונים, מוצאת נזק, מצליבה מול נוהל הבטיחות ומעבירה לאדם רק את מה שהיא לא בטוחה בו. נתונים סינתטיים בלבד.">
+<link rel="canonical" href="https://al-solutions.co.il/demos/computer-vision/">
+<link rel="alternate" hreflang="he" href="https://al-solutions.co.il/demos/computer-vision/">
+<link rel="alternate" hreflang="en" href="https://al-solutions.co.il/en/demos/computer-vision/">
+<link rel="alternate" hreflang="x-default" href="https://al-solutions.co.il/en/demos/computer-vision/">
+<meta property="og:type" content="website">
+<meta property="og:title" content="דמו: ראייה ממוחשבת לבקרת סחורה נכנסת">
+<meta property="og:description" content="מצלמה אחת במחסן: זיהוי נזק, בדיקת חריגה מנוהל, ואדם בלולאה כשהמערכת לא בטוחה. דמו עם נתונים סינתטיים.">
+<meta property="og:url" content="https://al-solutions.co.il/demos/computer-vision/">
+<meta property="og:image" content="https://al-solutions.co.il/assets/img/og-he.png">
+<meta property="og:locale" content="he_IL">
+<link rel="icon" href="/assets/img/favicon.ico" sizes="32x32">
+<link rel="icon" href="/assets/img/favicon-32.png" type="image/png" sizes="32x32">
+<link rel="icon" href="/assets/img/favicon-192.png" type="image/png" sizes="192x192">
+<link rel="apple-touch-icon" href="/assets/img/apple-touch-icon.png">
+<link rel="stylesheet" href="/assets/css/demos.css">
+<link rel="stylesheet" href="/assets/css/a11y-widget.css">
+</head>
+<body>
+<a class="skip-link" href="#main">דילוג לתוכן</a>
+
+<header class="demo-header">
+  <div class="container">
+    <a class="brand" href="/" aria-label="AL Solutions, דף הבית">
+      <img src="/assets/img/logo-icon-on-dark.svg" alt="" width="122" height="100">
+      <span class="brand-name">Solutions</span>
+    </a>
+    <div class="header-links">
+      <span class="demo-badge"><span class="dot" aria-hidden="true"></span>דמו · נתונים סינתטיים</span>
+      <a href="/demos/">כל הדמואים</a>
+      <a href="/#contact">דברו איתי</a>
+      <a class="lang-switch" href="/en/demos/computer-vision/" lang="en" hreflang="en">EN</a>
+    </div>
+  </div>
+</header>
+
+<main id="main">
+  <section class="demo-hero">
+    <div class="container">
+      <span class="kicker">Computer Vision</span>
+      <h1>מצלמה אחת במזח הקבלה, בדיקה של כל משטח</h1>
+      <p class="sub">בחרו פריים מהמצלמה ולחצו על ניתוח. המערכת מזהה את המשטחים והקרטונים, מוצאת נזק, מצליבה את מה שהיא רואה מול נוהל הבטיחות הכתוב, ומעבירה לעין אנושית רק את מה שהיא עצמה לא בטוחה בו. כל הפריימים כאן מצוירים, לא צולמו.</p>
+    </div>
+  </section>
+
+  <div class="container">
+    <div class="app-frame" dir="rtl">
+      <div class="app-bar">
+        <span class="app-name">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" aria-hidden="true"><path d="M2 7h3l2-3h10l2 3h3v13H2z"/><circle cx="12" cy="13" r="4"/></svg>
+          בקרת סחורה נכנסת
+        </span>
+        <span class="app-badge">סביבת דמו · חברה פיקטיבית: יבוא הצפון בע"מ</span>
+      </div>
+      <div class="app-body" id="app-root"></div>
+    </div>
+  </div>
+
+  <section class="demo-explain">
+    <div class="container">
+      <h2>מה קורה כאן בעצם</h2>
+      <div class="explain-grid">
+        <div class="explain-card">
+          <span class="num" aria-hidden="true">1</span>
+          <h3>זיהוי עם ציון ביטחון</h3>
+          <p>המודל מסמן כל אובייקט בפריים ונותן לו ציון ביטחון. אין זיהוי שקט: מה שהמערכת ראתה, אתם רואים גם.</p>
+        </div>
+        <div class="explain-card">
+          <span class="num" aria-hidden="true">2</span>
+          <h3>הצלבה מול נוהל כתוב</h3>
+          <p>מה שנראה בפריים מוצלב מול הכללים שלכם. ערימה של חמישה משטחים היא לא סתם תמונה, היא חריגה מסעיף בנוהל.</p>
+        </div>
+        <div class="explain-card">
+          <span class="num" aria-hidden="true">3</span>
+          <h3>אדם בלולאה</h3>
+          <p>תאורה חלשה או הסתרה מורידות את הביטחון, והמערכת אומרת את זה במקום לנחש. אדם מכריע, וההכרעה מתועדת.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="demo-stats">
+    <div class="container">
+      <h2>מה הופך את זה למערכת רצינית</h2>
+      <div class="stats-grid">
+        <div class="stat-card"><span class="n">100%</span><span class="l">מהזיהויים מוצגים עם ציון ביטחון, ומסומנים על התמונה</span></div>
+        <div class="stat-card"><span class="n">85%</span><span class="l">סף הביטחון בדמו: מתחתיו, אדם מכריע</span></div>
+        <div class="stat-card"><span class="n">גולדן דאטה סט</span><span class="l">בפרויקט אמיתי הדיוק נמדד על תמונות מהאתר שלכם, לפני עלייה לאוויר</span></div>
+      </div>
+      <p class="stats-note">הפריימים בדמו מצוירים ולא צולמו, ואין בהם אנשים. בעבודה אמיתית המודל מאומן ונמדד על צילומים מהמצלמות שלכם, עם התייחסות לפרטיות במקומות שבהם עוברים עובדים.</p>
+    </div>
+  </section>
+
+  <section class="demo-cta">
+    <div class="container">
+      <h2>יש לכם מצלמות שרק מקליטות?</h2>
+      <p>שיחת היכרות של 30 דקות, בלי התחייבות. ממפים יחד מה כבר רואים המצלמות שלכם, ומה שווה שהן יתחילו לבדוק.</p>
+      <div class="cta-row">
+        <a class="btn btn-primary" href="https://wa.me/972502636703?text=%D7%94%D7%99%D7%99%2C%20%D7%A8%D7%90%D7%99%D7%AA%D7%99%20%D7%90%D7%AA%20%D7%94%D7%93%D7%9E%D7%95%20%D7%A9%D7%9C%20%D7%94%D7%A8%D7%90%D7%99%D7%99%D7%94%20%D7%94%D7%9E%D7%9E%D7%95%D7%97%D7%A9%D7%91%D7%AA%20%D7%95%D7%90%D7%A9%D7%9E%D7%97%20%D7%9C%D7%A9%D7%9E%D7%95%D7%A2%20%D7%A2%D7%95%D7%93">שיחת היכרות חינם ב-WhatsApp</a>
+        <a class="btn btn-secondary" href="/demos/">לשאר הדמואים</a>
+      </div>
+    </div>
+  </section>
+</main>
+
+<footer class="demo-footer">
+  <div class="container">
+    <div class="flinks">
+      <a href="/">דף הבית</a>
+      <a href="/privacy/">מדיניות פרטיות</a>
+      <a href="/accessibility/">הצהרת נגישות</a>
+      <a href="/en/demos/computer-vision/" lang="en" hreflang="en">English</a>
+    </div>
+    <p>© 2026 AL Solutions. כל הזכויות שמורות. הדמו משתמש בנתונים סינתטיים בלבד.</p>
+  </div>
+</footer>
+
+<script>
+window.DEMO = {
+  lang: 'he', dir: 'rtl', threshold: 85,
+  strings: {
+    pick: 'בחרו פריים מהמצלמה:',
+    pipeline: 'צינור העיבוד',
+    steps: ['קליטת פריים', 'איתור אובייקטים', 'סיווג וציון ביטחון', 'הצלבה מול נוהל הבטיחות'],
+    detections: 'מה המערכת רואה',
+    detsEmpty: 'הזיהויים יופיעו כאן אחרי הניתוח',
+    run: 'ניתוח הפריים',
+    again: 'הרצה מחדש',
+    processing: 'מנתח את הפריים',
+    count: (a, b) => a + ' מתוך ' + b,
+    manual: 'הוכרע ידנית',
+    reviewNeeded: 'נדרשת הכרעה אנושית',
+    reviewPill: 'נדרשת הכרעה',
+    reviewTitle: 'המערכת לא בטוחה, אדם מכריע'
+  },
+  frames: [
+    {
+      chip: 'משטחים תקינים · מזח 2',
+      scene: 'clean', cam: 'CAM-02 · מזח קבלה', time: '09:14:22',
+      alt: 'פריים מצויר של מזח קבלה: שני משטחים עם שלושה קרטונים כל אחד, ותווית משלוח על הקרטון הקדמי',
+      detections: [
+        { label: 'משטחים בפריים', value: '2 משטחים', short: 'משטח', conf: 99, b: [88, 170, 108, 96] },
+        { label: 'קרטונים', value: '6 קרטונים', short: 'קרטון', conf: 98, b: [260, 170, 108, 96] },
+        { label: 'תווית משלוח', value: 'PO-8867 · נקראה', short: 'תווית', conf: 96, b: [125, 208, 36, 20] },
+        { label: 'נזק גלוי', value: 'לא נמצא', short: 'תקין', conf: 97, b: null }
+      ],
+      verdict: 'auto'
+    },
+    {
+      chip: 'קרטון פגום · מזח 2',
+      scene: 'damaged', cam: 'CAM-02 · מזח קבלה', time: '11:03:47',
+      alt: 'פריים מצויר של מזח קבלה: אחד הקרטונים במשטח הימני קרוע בפינה',
+      detections: [
+        { label: 'משטחים בפריים', value: '2 משטחים', short: 'משטח', conf: 99, b: [88, 170, 108, 96] },
+        { label: 'קרטונים', value: '6 קרטונים', short: 'קרטון', conf: 98, b: [260, 170, 108, 96] },
+        { label: 'תווית משלוח', value: 'PO-8867 · נקראה', short: 'תווית', conf: 96, b: [125, 208, 36, 20] },
+        { label: 'נזק גלוי', value: 'קרע בפינת קרטון', short: 'נזק', conf: 94, kind: 'bad', b: [264, 190, 96, 30] }
+      ],
+      verdict: 'damage'
+    },
+    {
+      chip: 'ערימה גבוהה מדי · מזח 2',
+      scene: 'tall', cam: 'CAM-02 · מזח קבלה', time: '13:41:09',
+      alt: 'פריים מצויר של מזח קבלה: המשטח השמאלי ערום לגובה חמישה קרטונים, הימני לגובה שניים',
+      detections: [
+        { label: 'משטח תקין', value: 'גובה 2 משטחים', short: 'תקין', conf: 99, b: [260, 194, 108, 72] },
+        { label: 'גובה ערימה', value: '5 משטחים', short: 'ערימה', conf: 97, kind: 'bad', b: [88, 106, 108, 160] },
+        { label: 'תווית משלוח', value: 'PO-8867 · נקראה', short: 'תווית', conf: 95, b: [125, 208, 36, 20] },
+        { label: 'נזק גלוי', value: 'לא נמצא', short: 'תקין', conf: 96, b: null }
+      ],
+      verdict: 'policy'
+    },
+    {
+      chip: 'תאורה חלשה והסתרה · מזח 2',
+      scene: 'dim', dim: true, cam: 'CAM-02 · מזח קבלה', time: '21:56:30',
+      alt: 'פריים מצויר של מזח קבלה בתאורה חלשה, כשצל מסתיר חלק מהמשטח הימני',
+      detections: [
+        { label: 'משטחים בפריים', value: '2 משטחים', short: 'משטח', conf: 93, b: [88, 170, 108, 96] },
+        { label: 'קרטונים', value: '6 קרטונים', short: 'קרטון', conf: 89, b: [260, 170, 108, 96] },
+        { label: 'תווית משלוח', value: 'PO-8867 · נקראה', short: 'תווית', conf: 91, b: [125, 208, 36, 20] },
+        { label: 'נזק אפשרי', value: 'לא ברור', short: 'לא ברור', conf: 61, b: [262, 188, 100, 32] }
+      ],
+      review: {
+        row: 3,
+        why: 'ציון הביטחון בשדה <strong>נזק אפשרי</strong> הוא 61%, מתחת לסף של 85%. הפריים צולם בתאורה חלשה וצל מסתיר חלק מהמשטח. מה רואים שם באמת?',
+        choices: ['צל וקמט בעטיפה, לא נזק', 'קרע ממשי בקרטון'],
+        correct: 0,
+        verdictOk: 'cleared',
+        verdictNo: 'damage'
+      }
+    }
+  ],
+  verdicts: {
+    auto: {
+      pill: 'pill-green', label: 'אושר אוטומטית',
+      body: 'המשטחים נקלטו למלאי (סימולציה)',
+      cta: 'פתיחת רשומת קליטה', ctaDone: 'נוצרה (סימולציה)'
+    },
+    damage: {
+      pill: 'pill-amber', label: 'סומן לתביעת ספק',
+      body: 'הפריים נשמר כראיה והמשלוח סומן (סימולציה)',
+      cta: 'פתיחת פנייה לספק', ctaDone: 'נפתחה פנייה SUP-3318 (סימולציה)',
+      note: 'הפריים עצמו נשמר לצד הרשומה, כך שהתביעה מול הספק נשענת על ראיה ולא על זיכרון.'
+    },
+    policy: {
+      pill: 'pill-red', label: 'חריגה מנוהל הבטיחות',
+      body: 'גובה ערימה 5 משטחים, מעל המותר בנוהל',
+      cta: 'התראה למנהל המחסן', ctaDone: 'ההתראה נשלחה (סימולציה)',
+      note: 'נוהל בטיחות מחסן, סעיף 8.1: גובה ערימה מרבי במדפי צובר הוא 4 משטחים. אותו נוהל בדיוק שעוזר הידע עונה עליו בדמו ה-RAG.'
+    },
+    cleared: {
+      pill: 'pill-blue', label: 'נוקה לאחר הכרעה אנושית',
+      body: 'ההכרעה והפריים נשמרו ביומן (סימולציה)',
+      cta: 'פתיחת רשומת קליטה', ctaDone: 'נוצרה (סימולציה)',
+      note: 'התראת שווא שאדם סגר תוך שניות. גם ההכרעה הזאת נכנסת לסט המדידה, וככה הסף מתכייל לאורך זמן.'
+    }
+  }
+};
+</script>
+<script src="/assets/js/demo-core.js"></script>
+<script src="/assets/js/demo-vision.js"></script>
+<script src="/assets/js/a11y-widget.js" defer></script>
+</body>
+</html>

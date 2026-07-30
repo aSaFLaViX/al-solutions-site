@@ -1,0 +1,230 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Demo: Computer vision for incoming goods | AL Solutions</title>
+<meta name="description" content="Interactive demo: one camera at the receiving dock detects pallets and cartons, finds damage, cross-checks the written safety policy, and escalates only what it is unsure about. Synthetic data only.">
+<link rel="canonical" href="https://al-solutions.co.il/en/demos/computer-vision/">
+<link rel="alternate" hreflang="he" href="https://al-solutions.co.il/demos/computer-vision/">
+<link rel="alternate" hreflang="en" href="https://al-solutions.co.il/en/demos/computer-vision/">
+<link rel="alternate" hreflang="x-default" href="https://al-solutions.co.il/en/demos/computer-vision/">
+<meta property="og:type" content="website">
+<meta property="og:title" content="Demo: Computer vision for incoming goods">
+<meta property="og:description" content="One warehouse camera: damage detection, policy breach checking, and a human in the loop when the model is unsure. Demo with synthetic data.">
+<meta property="og:url" content="https://al-solutions.co.il/en/demos/computer-vision/">
+<meta property="og:image" content="https://al-solutions.co.il/assets/img/og-en.png">
+<meta property="og:locale" content="en_US">
+<link rel="icon" href="/assets/img/favicon.ico" sizes="32x32">
+<link rel="icon" href="/assets/img/favicon-32.png" type="image/png" sizes="32x32">
+<link rel="icon" href="/assets/img/favicon-192.png" type="image/png" sizes="192x192">
+<link rel="apple-touch-icon" href="/assets/img/apple-touch-icon.png">
+<link rel="stylesheet" href="/assets/css/demos.css">
+<link rel="stylesheet" href="/assets/css/a11y-widget.css">
+</head>
+<body>
+<a class="skip-link" href="#main">Skip to content</a>
+
+<header class="demo-header">
+  <div class="container">
+    <a class="brand" href="/en/" aria-label="AL Solutions, home">
+      <img src="/assets/img/logo-icon-on-dark.svg" alt="" width="122" height="100">
+      <span class="brand-name">Solutions</span>
+    </a>
+    <div class="header-links">
+      <span class="demo-badge"><span class="dot" aria-hidden="true"></span>Demo · Synthetic data</span>
+      <a href="/en/demos/">All demos</a>
+      <a href="/en/#contact">Talk to me</a>
+      <a class="lang-switch" href="/demos/computer-vision/" lang="he" hreflang="he">עברית</a>
+    </div>
+  </div>
+</header>
+
+<main id="main">
+  <section class="demo-hero">
+    <div class="container">
+      <span class="kicker">Computer Vision</span>
+      <h1>One camera on the dock, every pallet checked</h1>
+      <p class="sub">Pick a camera frame and run the analysis. The system finds the pallets and cartons, spots damage, cross-checks what it sees against the written safety policy, and sends a person only the things it is genuinely unsure about. Every frame here is drawn, not photographed.</p>
+    </div>
+  </section>
+
+  <div class="container">
+    <div class="app-frame" dir="ltr">
+      <div class="app-bar">
+        <span class="app-name">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" aria-hidden="true"><path d="M2 7h3l2-3h10l2 3h3v13H2z"/><circle cx="12" cy="13" r="4"/></svg>
+          Incoming goods inspection
+        </span>
+        <span class="app-badge">Demo environment · Fictional company: Northline Imports Ltd</span>
+      </div>
+      <div class="app-body" id="app-root"></div>
+    </div>
+  </div>
+
+  <section class="demo-explain">
+    <div class="container">
+      <h2>What is actually happening</h2>
+      <div class="explain-grid">
+        <div class="explain-card">
+          <span class="num" aria-hidden="true">1</span>
+          <h3>Detection with confidence</h3>
+          <p>The model boxes every object in the frame and scores it. Nothing is detected silently: what the system saw, you see too.</p>
+        </div>
+        <div class="explain-card">
+          <span class="num" aria-hidden="true">2</span>
+          <h3>Checked against a written rule</h3>
+          <p>What appears in the frame is cross-checked against your own policies. A five-pallet stack is not just an image, it is a breach of a specific clause.</p>
+        </div>
+        <div class="explain-card">
+          <span class="num" aria-hidden="true">3</span>
+          <h3>Human in the loop</h3>
+          <p>Poor light or occlusion lowers confidence, and the system says so instead of guessing. A person decides, and the decision is recorded.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="demo-stats">
+    <div class="container">
+      <h2>What makes this a serious system</h2>
+      <div class="stats-grid">
+        <div class="stat-card"><span class="n">100%</span><span class="l">of detections shown with a confidence score, and marked on the frame</span></div>
+        <div class="stat-card"><span class="n">85%</span><span class="l">confidence threshold in this demo: below it, a person decides</span></div>
+        <div class="stat-card"><span class="n">Golden set</span><span class="l">in a real engagement, accuracy is measured on footage from your own site before go live</span></div>
+      </div>
+      <p class="stats-note">The frames in this demo are drawn rather than photographed, and contain no people. In real work the model is trained and measured on your own camera footage, with privacy handled explicitly wherever staff are in shot.</p>
+    </div>
+  </section>
+
+  <section class="demo-cta">
+    <div class="container">
+      <h2>Cameras that only record?</h2>
+      <p>A 30 minute intro call, no commitment. We map what your cameras already see, and what is worth having them start to check.</p>
+      <div class="cta-row">
+        <a class="btn btn-primary" href="https://wa.me/972502636703?text=Hi%2C%20I%20saw%20the%20computer%20vision%20demo%20and%20would%20like%20to%20hear%20more">Free intro call on WhatsApp</a>
+        <a class="btn btn-secondary" href="/en/demos/">See the other demos</a>
+      </div>
+    </div>
+  </section>
+</main>
+
+<footer class="demo-footer">
+  <div class="container">
+    <div class="flinks">
+      <a href="/en/">Home</a>
+      <a href="/en/privacy/">Privacy policy</a>
+      <a href="/accessibility/" lang="he" hreflang="he">הצהרת נגישות</a>
+      <a href="/demos/computer-vision/" lang="he" hreflang="he">עברית</a>
+    </div>
+    <p>© 2026 AL Solutions. All rights reserved. This demo uses synthetic data only.</p>
+  </div>
+</footer>
+
+<script>
+window.DEMO = {
+  lang: 'en', dir: 'ltr', threshold: 85,
+  strings: {
+    pick: 'Pick a camera frame:',
+    pipeline: 'Processing pipeline',
+    steps: ['Frame capture', 'Object detection', 'Classification and confidence', 'Safety policy cross-check'],
+    detections: 'What the system sees',
+    detsEmpty: 'Detections will appear here after the analysis',
+    run: 'Analyze frame',
+    again: 'Run again',
+    processing: 'Analyzing the frame',
+    count: (a, b) => a + ' of ' + b,
+    manual: 'Human call',
+    reviewNeeded: 'Human decision required',
+    reviewPill: 'Needs a decision',
+    reviewTitle: 'The system is unsure, a person decides'
+  },
+  frames: [
+    {
+      chip: 'Clean pallets · Dock 2',
+      scene: 'clean', cam: 'CAM-02 · Receiving dock', time: '09:14:22',
+      alt: 'Drawn frame of a receiving dock: two pallets with three cartons each, and a shipping label on the front carton',
+      detections: [
+        { label: 'Pallets in frame', value: '2 pallets', short: 'pallet', conf: 99, b: [88, 170, 108, 96] },
+        { label: 'Cartons', value: '6 cartons', short: 'carton', conf: 98, b: [260, 170, 108, 96] },
+        { label: 'Shipping label', value: 'PO-8867 · read', short: 'label', conf: 96, b: [125, 208, 36, 20] },
+        { label: 'Visible damage', value: 'None found', short: 'clear', conf: 97, b: null }
+      ],
+      verdict: 'auto'
+    },
+    {
+      chip: 'Damaged carton · Dock 2',
+      scene: 'damaged', cam: 'CAM-02 · Receiving dock', time: '11:03:47',
+      alt: 'Drawn frame of a receiving dock: one carton on the right-hand pallet is torn at the corner',
+      detections: [
+        { label: 'Pallets in frame', value: '2 pallets', short: 'pallet', conf: 99, b: [88, 170, 108, 96] },
+        { label: 'Cartons', value: '6 cartons', short: 'carton', conf: 98, b: [260, 170, 108, 96] },
+        { label: 'Shipping label', value: 'PO-8867 · read', short: 'label', conf: 96, b: [125, 208, 36, 20] },
+        { label: 'Visible damage', value: 'Torn carton corner', short: 'damage', conf: 94, kind: 'bad', b: [264, 190, 96, 30] }
+      ],
+      verdict: 'damage'
+    },
+    {
+      chip: 'Stack too high · Dock 2',
+      scene: 'tall', cam: 'CAM-02 · Receiving dock', time: '13:41:09',
+      alt: 'Drawn frame of a receiving dock: the left pallet is stacked five cartons high, the right one two',
+      detections: [
+        { label: 'Compliant pallet', value: '2 pallets high', short: 'ok', conf: 99, b: [260, 194, 108, 72] },
+        { label: 'Stack height', value: '5 pallets high', short: 'stack', conf: 97, kind: 'bad', b: [88, 106, 108, 160] },
+        { label: 'Shipping label', value: 'PO-8867 · read', short: 'label', conf: 95, b: [125, 208, 36, 20] },
+        { label: 'Visible damage', value: 'None found', short: 'clear', conf: 96, b: null }
+      ],
+      verdict: 'policy'
+    },
+    {
+      chip: 'Low light and occlusion · Dock 2',
+      scene: 'dim', dim: true, cam: 'CAM-02 · Receiving dock', time: '21:56:30',
+      alt: 'Drawn frame of a receiving dock in low light, with a shadow covering part of the right-hand pallet',
+      detections: [
+        { label: 'Pallets in frame', value: '2 pallets', short: 'pallet', conf: 93, b: [88, 170, 108, 96] },
+        { label: 'Cartons', value: '6 cartons', short: 'carton', conf: 89, b: [260, 170, 108, 96] },
+        { label: 'Shipping label', value: 'PO-8867 · read', short: 'label', conf: 91, b: [125, 208, 36, 20] },
+        { label: 'Possible damage', value: 'Unclear', short: 'unclear', conf: 61, b: [262, 188, 100, 32] }
+      ],
+      review: {
+        row: 3,
+        why: 'Confidence on <strong>possible damage</strong> is 61%, below the 85% threshold. The frame was captured in low light and a shadow covers part of the pallet. What is actually there?',
+        choices: ['Shadow and a crease in the wrap, not damage', 'A real tear in the carton'],
+        correct: 0,
+        verdictOk: 'cleared',
+        verdictNo: 'damage'
+      }
+    }
+  ],
+  verdicts: {
+    auto: {
+      pill: 'pill-green', label: 'Cleared automatically',
+      body: 'Pallets booked into stock (simulated)',
+      cta: 'Create intake record', ctaDone: 'Created (simulated)'
+    },
+    damage: {
+      pill: 'pill-amber', label: 'Flagged for a supplier claim',
+      body: 'Frame stored as evidence and the shipment flagged (simulated)',
+      cta: 'Open a supplier claim', ctaDone: 'Claim SUP-3318 opened (simulated)',
+      note: 'The frame itself is stored alongside the record, so the claim against the supplier rests on evidence rather than on memory.'
+    },
+    policy: {
+      pill: 'pill-red', label: 'Safety policy breach',
+      body: 'Stack height 5 pallets, above the documented limit',
+      cta: 'Alert the warehouse manager', ctaDone: 'Alert sent (simulated)',
+      note: 'Warehouse Safety Manual, section 8.1: maximum stack height on bulk racking is 4 pallets. The same manual the knowledge assistant answers from in the RAG demo.'
+    },
+    cleared: {
+      pill: 'pill-blue', label: 'Cleared after a human decision',
+      body: 'Decision and frame written to the log (simulated)',
+      cta: 'Create intake record', ctaDone: 'Created (simulated)',
+      note: 'A false alarm a person closed in seconds. That decision joins the measurement set too, which is how the threshold gets calibrated over time.'
+    }
+  }
+};
+</script>
+<script src="/assets/js/demo-core.js"></script>
+<script src="/assets/js/demo-vision.js"></script>
+<script src="/assets/js/a11y-widget.js" defer></script>
+</body>
+</html>

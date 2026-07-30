@@ -1,0 +1,215 @@
+<!DOCTYPE html>
+<html lang="he" dir="rtl">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>דמו: עיבוד מסמכים אוטומטי עם AI | AL Solutions</title>
+<meta name="description" content="דמו אינטראקטיבי: קליטת חשבוניות ותעודות משלוח, חילוץ שדות עם ציון ביטחון לכל שדה, ובדיקה אנושית רק כשצריך. נתונים סינתטיים בלבד.">
+<link rel="canonical" href="https://al-solutions.co.il/demos/document-ai/">
+<link rel="alternate" hreflang="he" href="https://al-solutions.co.il/demos/document-ai/">
+<link rel="alternate" hreflang="en" href="https://al-solutions.co.il/en/demos/document-ai/">
+<link rel="alternate" hreflang="x-default" href="https://al-solutions.co.il/en/demos/document-ai/">
+<meta property="og:type" content="website">
+<meta property="og:title" content="דמו: עיבוד מסמכים אוטומטי עם AI">
+<meta property="og:description" content="מחשבונית סרוקה לרשומה מסודרת: חילוץ שדות, ציוני ביטחון ואדם בלולאה. דמו עם נתונים סינתטיים.">
+<meta property="og:url" content="https://al-solutions.co.il/demos/document-ai/">
+<meta property="og:image" content="https://al-solutions.co.il/assets/img/og-he.png">
+<meta property="og:locale" content="he_IL">
+<link rel="icon" href="/assets/img/favicon.ico" sizes="32x32">
+<link rel="icon" href="/assets/img/favicon-32.png" type="image/png" sizes="32x32">
+<link rel="icon" href="/assets/img/favicon-192.png" type="image/png" sizes="192x192">
+<link rel="apple-touch-icon" href="/assets/img/apple-touch-icon.png">
+<link rel="stylesheet" href="/assets/css/demos.css">
+<link rel="stylesheet" href="/assets/css/a11y-widget.css">
+</head>
+<body>
+<a class="skip-link" href="#main">דילוג לתוכן</a>
+
+<header class="demo-header">
+  <div class="container">
+    <a class="brand" href="/" aria-label="AL Solutions, דף הבית">
+      <img src="/assets/img/logo-icon-on-dark.svg" alt="" width="122" height="100">
+      <span class="brand-name">Solutions</span>
+    </a>
+    <div class="header-links">
+      <span class="demo-badge"><span class="dot" aria-hidden="true"></span>דמו · נתונים סינתטיים</span>
+      <a href="/demos/">כל הדמואים</a>
+      <a href="/#contact">דברו איתי</a>
+      <a class="lang-switch" href="/en/demos/document-ai/" lang="en" hreflang="en">EN</a>
+    </div>
+  </div>
+</header>
+
+<main id="main">
+  <section class="demo-hero">
+    <div class="container">
+      <span class="kicker">עיבוד מסמכים</span>
+      <h1>מחשבונית סרוקה לרשומה מסודרת, בלי הקלדה</h1>
+      <p class="sub">בחרו מסמך לדוגמה ולחצו על עיבוד. המערכת מזהה את סוג המסמך, מחלצת את השדות החשובים עם ציון ביטחון לכל שדה, ומעבירה לבדיקה אנושית רק את מה שבאמת דורש עין. כל הנתונים כאן מומצאים.</p>
+    </div>
+  </section>
+
+  <div class="container">
+    <div class="app-frame" dir="rtl">
+      <div class="app-bar">
+        <span class="app-name">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" aria-hidden="true"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><path d="M14 2v6h6"/><path d="M9 13l2 2 4-4"/></svg>
+          קליטת מסמכים חכמה
+        </span>
+        <span class="app-badge">סביבת דמו · חברה פיקטיבית: יבוא הצפון בע"מ</span>
+      </div>
+      <div class="app-body" id="app-root"></div>
+    </div>
+  </div>
+
+  <section class="demo-explain">
+    <div class="container">
+      <h2>מה קורה כאן בעצם</h2>
+      <div class="explain-grid">
+        <div class="explain-card">
+          <span class="num" aria-hidden="true">1</span>
+          <h3>קליטה וזיהוי</h3>
+          <p>המסמך נסרק, עובר OCR והמערכת מזהה לבד אם זו חשבונית, תעודת משלוח או טופס אחר.</p>
+        </div>
+        <div class="explain-card">
+          <span class="num" aria-hidden="true">2</span>
+          <h3>חילוץ עם ציון ביטחון</h3>
+          <p>כל שדה מחולץ מקבל ציון ביטחון. הצלבות אוטומטיות בודקות שהסכומים מסתדרים.</p>
+        </div>
+        <div class="explain-card">
+          <span class="num" aria-hidden="true">3</span>
+          <h3>אדם בלולאה</h3>
+          <p>מתחת לסף הביטחון, המסמך עובר לאישור אנושי. השאר נקלט אוטומטית. ככה בונים אמון במערכת.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="demo-stats">
+    <div class="container">
+      <h2>מה הופך את זה למערכת רצינית</h2>
+      <div class="stats-grid">
+        <div class="stat-card"><span class="n">100%</span><span class="l">מהשדות מקבלים ציון ביטחון, אין ניחושים שקטים</span></div>
+        <div class="stat-card"><span class="n">85%</span><span class="l">סף הביטחון בדמו: מתחתיו, אדם מחליט</span></div>
+        <div class="stat-card"><span class="n">גולדן דאטה סט</span><span class="l">בפרויקט אמיתי הדיוק נמדד על מדגם מסמכים שלכם, לפני עלייה לאוויר</span></div>
+      </div>
+      <p class="stats-note">הדמו הזה רץ על נתונים מומצאים לחלוטין. בעבודה אמיתית מגדירים מראש מה נחשב הצלחה, ומודדים על המסמכים שלכם.</p>
+    </div>
+  </section>
+
+  <section class="demo-cta">
+    <div class="container">
+      <h2>רוצים את זה על המסמכים שלכם?</h2>
+      <p>שיחת היכרות של 30 דקות, בלי התחייבות. ממפים יחד אילו מסמכים בעסק שלכם שווה להפוך לאוטומטיים.</p>
+      <div class="cta-row">
+        <a class="btn btn-primary" href="https://wa.me/972502636703?text=%D7%94%D7%99%D7%99%2C%20%D7%A8%D7%90%D7%99%D7%AA%D7%99%20%D7%90%D7%AA%20%D7%94%D7%93%D7%9E%D7%95%20%D7%A9%D7%9C%20%D7%A2%D7%99%D7%91%D7%95%D7%93%20%D7%94%D7%9E%D7%A1%D7%9E%D7%9B%D7%99%D7%9D%20%D7%95%D7%90%D7%A9%D7%9E%D7%97%20%D7%9C%D7%A9%D7%9E%D7%95%D7%A2%20%D7%A2%D7%95%D7%93">שיחת היכרות חינם ב-WhatsApp</a>
+        <a class="btn btn-secondary" href="/demos/">לשאר הדמואים</a>
+      </div>
+    </div>
+  </section>
+</main>
+
+<footer class="demo-footer">
+  <div class="container">
+    <div class="flinks">
+      <a href="/">דף הבית</a>
+      <a href="/privacy/">מדיניות פרטיות</a>
+      <a href="/accessibility/">הצהרת נגישות</a>
+      <a href="/en/demos/document-ai/" lang="en" hreflang="en">English</a>
+    </div>
+    <p>© 2026 AL Solutions. כל הזכויות שמורות. הדמו משתמש בנתונים סינתטיים בלבד.</p>
+  </div>
+</footer>
+
+<script>
+window.DEMO = {
+  lang: 'he', dir: 'rtl', cur: '₪', curAfter: true, numLocale: 'he-IL', threshold: 85,
+  strings: {
+    pick: 'בחרו מסמך לדוגמה:',
+    pipeline: 'צינור העיבוד',
+    steps: ['קליטת קובץ', 'OCR וזיהוי פריסה', 'זיהוי סוג מסמך', 'חילוץ שדות', 'בדיקות הצלבה'],
+    fields: 'שדות שחולצו',
+    fieldsEmpty: 'השדות יופיעו כאן אחרי העיבוד',
+    run: 'עיבוד המסמך',
+    again: 'הרצה מחדש',
+    processing: 'מעבד את המסמך',
+    count: (a, b) => a + ' מתוך ' + b,
+    date: 'תאריך', po: 'הזמנת רכש', item: 'פריט', qty: 'כמות', unitPrice: "מחיר יח'", lineTotal: 'סה"כ',
+    subtotal: 'סכום ביניים', vat: 'מע"מ', total: 'סה"כ לתשלום', totalUnits: 'סה"כ יחידות',
+    poMissingPaper: 'לא צוין',
+    fSupplier: 'ספק', fDocNo: 'מספר מסמך', fDate: 'תאריך', fPo: 'מס\' הזמנת רכש',
+    fSubtotal: 'סכום לפני מע"מ', fVat: 'מע"מ', fTotal: 'סה"כ לתשלום', fUnits: 'סה"כ יחידות',
+    missing: 'לא נמצא',
+    reviewNeeded: 'נדרשת בדיקה אנושית',
+    reviewPill: 'נדרשת בדיקה',
+    reviewTitle: 'המערכת לא בטוחה, אדם מחליט',
+    reviewWhy: (label, conf) => 'ציון הביטחון של השדה <strong>' + label + '</strong> הוא ' + conf + '%, מתחת לסף של 85%. הסריקה מטושטשת באזור הסכום. בחרו את הערך הנכון:',
+    manual: 'אושר ידנית',
+    doneAuto: 'נקלט אוטומטית',
+    doneHuman: 'נקלט לאחר אישור אנושי',
+    donePartial: 'נקלט, שדה אחד להשלמה',
+    partialNote: 'מספר הזמנת הרכש חסר במסמך המקורי, לכן הרשומה סומנה להשלמה ידנית.',
+    saved: 'הרשומה נשמרה במערכת (סימולציה)',
+    savedA11y: 'הרשומה נשמרה במערכת',
+    export: 'יצירת רשומת ERP',
+    exported: 'נוצרה (סימולציה)'
+  },
+  docs: [
+    {
+      chip: 'חשבונית מס · גל ציוד תעשייתי',
+      type: 'invoice', typeLabel: 'חשבונית מס', supplier: 'גל ציוד תעשייתי בע"מ',
+      supplierSub: 'ח.פ 514872311 · אזור התעשייה נתניה', docNo: 'INV-2447', date: '12.07.2026', po: 'PO-8812',
+      vatRate: 0.18,
+      items: [
+        { name: 'מסב כדורי 6205', qty: 24, price: 38.50 },
+        { name: 'רצועת הנעה B-1450', qty: 12, price: 74.00 },
+        { name: 'שמן הידראולי 46, מיכל 20 ליטר', qty: 6, price: 210.00 }
+      ],
+      footer: 'תנאי תשלום: שוטף + 60 · הופק על ידי מערכת הנהלת החשבונות של הספק',
+      conf: { supplier: 99, docNo: 98, date: 97, po: 96, subtotal: 98, vat: 99, total: 99 }
+    },
+    {
+      chip: 'תעודת משלוח · אספקה טכנית רם',
+      type: 'delivery', typeLabel: 'תעודת משלוח', supplier: 'אספקה טכנית רם בע"מ',
+      supplierSub: 'ח.פ 512334186 · פתח תקווה', docNo: 'DN-1032', date: '18.07.2026', po: 'PO-8867',
+      vatRate: 0.18,
+      items: [
+        { name: 'לוח בקרה PLC דגם C200', qty: 2, price: 0 },
+        { name: 'חיישן לחץ 0 עד 10 בר', qty: 8, price: 0 },
+        { name: 'כבל מסוכך 4x1.5, גליל 100 מטר', qty: 4, price: 0 }
+      ],
+      footer: 'הסחורה התקבלה במחסן: חתימת המקבל בעמוד 2',
+      conf: { supplier: 98, docNo: 97, date: 98, po: 95, units: 99 }
+    },
+    {
+      chip: 'חשבונית בלי מס\' הזמנה · מתכות דורון',
+      type: 'invoice', typeLabel: 'חשבונית מס', supplier: 'מתכות דורון בע"מ',
+      supplierSub: 'ח.פ 513908220 · עכו', docNo: 'INV-90311', date: '21.07.2026', po: '',
+      vatRate: 0.18,
+      items: [
+        { name: 'פרופיל אלומיניום 40x40, מוט 6 מטר', qty: 30, price: 52.00 },
+        { name: 'פח מגולוון 1.5 מ"מ, לוח', qty: 10, price: 118.00 }
+      ],
+      footer: 'הערה: אספקה חלקית, יתרה תסופק באוגוסט',
+      conf: { supplier: 97, docNo: 96, date: 98, subtotal: 97, vat: 98, total: 98 }
+    },
+    {
+      chip: 'סריקה מטושטשת · חשמל ובקרה כרמל',
+      type: 'invoice', typeLabel: 'חשבונית מס', supplier: 'חשמל ובקרה כרמל',
+      supplierSub: 'ע.מ 038112476 · חיפה', docNo: 'INV-5578', date: '25.07.2026', po: 'PO-8901',
+      vatRate: 0.18, messy: true, blurTotal: true, wrongTotal: 1348.16,
+      items: [
+        { name: 'מנוע חד פאזי 1.5 כ"ס', qty: 2, price: 640.00 },
+        { name: 'לוח חשמל משני, מורכב מראש', qty: 1, price: 282.00 }
+      ],
+      footer: 'עותק ללקוח · נסרק ממכשיר נייד',
+      conf: { supplier: 95, docNo: 93, date: 88, po: 91, subtotal: 90, vat: 92, total: 61 }
+    }
+  ]
+};
+</script>
+<script src="/assets/js/demo-core.js"></script>
+<script src="/assets/js/demo-document-ai.js"></script>
+<script src="/assets/js/a11y-widget.js" defer></script>
+</body>
+</html>
