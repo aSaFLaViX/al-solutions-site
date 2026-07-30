@@ -23,8 +23,16 @@
     const t = totals(doc);
     const wrap = el('div', 'paper' + (doc.messy ? ' messy' : ''));
     wrap.setAttribute('dir', D.dir);
+    /* data-l carries the column header per cell so the table can stack into
+       labelled rows at 320px, where four columns cannot fit without clipping.
+       attr() escaping matters here: the Hebrew for "total" is סה"כ, and the
+       gershayim closes the attribute if it is not encoded. */
+    const attr = s => String(s).replace(/&/g, '&amp;').replace(/"/g, '&quot;');
     const rows = doc.items.map(it =>
-      `<tr><td>${it.name}</td><td class="pnum">${it.qty}</td><td class="pnum">${money(it.price)}</td><td class="pnum">${money(it.qty * it.price)}</td></tr>`
+      `<tr><td data-l="${attr(S.item)}">${it.name}</td>` +
+      `<td class="pnum" data-l="${attr(S.qty)}">${it.qty}</td>` +
+      `<td class="pnum" data-l="${attr(S.unitPrice)}">${money(it.price)}</td>` +
+      `<td class="pnum" data-l="${attr(S.lineTotal)}">${money(it.qty * it.price)}</td></tr>`
     ).join('');
     const amounts = doc.type === 'invoice' ? `
       <div class="ptotals">

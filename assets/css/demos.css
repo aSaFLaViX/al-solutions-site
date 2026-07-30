@@ -725,6 +725,23 @@ body.rec .rec-brand { display: inline-flex; }
   /* 320px reflow (WCAG 1.4.10): field rows stack instead of escaping the panel */
   .f-row { grid-template-columns: 1fr auto; }
   .f-label { grid-column: 1 / -1; padding-bottom: 2px; }
+
+  /* The synthetic invoice is a 4-column table whose min-content width cannot
+     fit 320px. It used to overflow .paper (overflow:visible), so the total
+     column was CLIPPED rather than scrolled: 924.00 rendered as "24.00".
+     On a demo about reading invoice amounts, a wrong-looking number is worse
+     than the reflow failure itself. Shrinking the type does not close the gap
+     (three numeric columns alone need more than the sheet has), so the table
+     stacks into labelled rows, which is the standard responsive-table pattern
+     and cannot clip at any width. */
+  .paper { padding-inline: 14px; }
+  .pitems thead { position: absolute; width: 1px; height: 1px; overflow: hidden; clip: rect(0 0 0 0); }
+  .pitems tr { display: block; padding-block: 6px; border-bottom: 1px solid #E4E7EE; }
+  .pitems tr:last-child { border-bottom: none; }
+  .pitems td { display: flex; justify-content: space-between; gap: 12px; border: none; padding: 2px 0; }
+  .pitems td::before { content: attr(data-l); color: #5A6478; font-size: 11px; flex: none; }
+  .pitems td:first-child { font-weight: 600; }
+  .ptotals { max-width: none; }
 }
 
 /* ---------- Demo 1: Document AI ---------- */
@@ -765,7 +782,10 @@ body.rec .rec-brand { display: inline-flex; }
 .paper [data-f].hl { background: rgba(45, 127, 249, 0.22); box-shadow: 0 0 0 3px rgba(45, 127, 249, 0.35); }
 
 .extract-side { display: flex; flex-direction: column; }
-.fields-head { display: flex; align-items: center; justify-content: space-between; gap: 10px; }
+/* flex-wrap is a 320px reflow fix (1.4.10): the heading and its pill together
+   exceed the panel at that width, and .pill is nowrap, so without wrapping the
+   pill was pushed past its container edge. */
+.fields-head { display: flex; align-items: center; justify-content: space-between; gap: 10px; flex-wrap: wrap; }
 .fields-empty { font-size: 14px; color: var(--muted-dim); }
 .f-row {
   display: grid;
