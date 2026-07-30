@@ -11,13 +11,13 @@
     root.innerHTML = `
       <div class="tr-layout two-col">
         <div class="panel">
-          <div class="fields-head"><h4>${S.feedTitle}</h4><span class="pill pill-grey" id="feed-pill">${S.feedIdle}</span></div>
+          <div class="fields-head"><h3>${S.feedTitle}</h3><span class="pill pill-grey" id="feed-pill">${S.feedIdle}</span></div>
           <div class="feed" id="feed" aria-live="off"></div>
           <p class="feed-count" id="feed-count"></p>
         </div>
         <div class="tr-main">
           <div class="panel">
-            <h4>${S.agentTitle}</h4>
+            <h3>${S.agentTitle}</h3>
             <div class="alog" id="alog"><p class="fields-empty" id="alog-empty">${S.agentIdle}</p></div>
           </div>
         </div>

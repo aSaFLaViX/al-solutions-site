@@ -95,12 +95,12 @@
         <div><div class="panel cam-panel"><div id="cam-slot"></div></div></div>
         <div class="extract-side">
           <div class="panel">
-            <h4>${S.pipeline}</h4>
+            <h3>${S.pipeline}</h3>
             <div class="pipe" id="pipe"></div>
           </div>
           <div class="panel mt-12">
             <div class="fields-head">
-              <h4>${S.detections}</h4>
+              <h3>${S.detections}</h3>
               <span class="pill pill-grey" id="det-count"></span>
             </div>
             <div id="dets"></div>

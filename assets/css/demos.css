@@ -229,6 +229,17 @@ a:focus-visible, button:focus-visible, input:focus-visible, textarea:focus-visib
   white-space: nowrap;
 }
 .app-body { padding: 20px; min-height: 430px; }
+/* With JavaScript off the demo cannot run, and an unexplained empty frame is a
+   worse experience than an honest sentence. The rest of the page is static. */
+.noscript-note {
+  color: var(--muted-light);
+  font-size: 15.5px;
+  max-width: 62ch;
+  border-inline-start: 3px solid var(--blue);
+  padding: 10px 16px;
+  background: rgba(45, 127, 249, 0.08);
+  border-radius: 8px;
+}
 
 /* ---------- App primitives shared by all demos ---------- */
 
@@ -238,7 +249,7 @@ a:focus-visible, button:focus-visible, input:focus-visible, textarea:focus-visib
   border-radius: 12px;
   padding: 16px;
 }
-.panel h4, .panel-title {
+.panel h3, .panel h4, .panel-title {
   color: var(--white);
   font-size: 14.5px;
   font-weight: 700;
@@ -1042,7 +1053,7 @@ body.rec .rec-brand { display: inline-flex; }
 
 .cam .sc-bg { fill: #101F33; }
 .cam .sc-floor, .cam .sc-wall { stroke: #2C476B; stroke-width: 1.5; fill: none; }
-.cam .sc-pallet rect { fill: #3B4A5E; stroke: #55677E; stroke-width: 1; }
+.cam .sc-pallet rect { fill: #3B4A5E; stroke: #7A8CA3; stroke-width: 1; } /* 2.87:1 -> 4.82:1 on the scene bg */
 .cam .sc-carton rect, .cam .sc-carton path { fill: #4A5C72; stroke: #6C7F97; stroke-width: 1.2; }
 .cam .sc-carton .sc-tape { stroke: #8C9DB2; stroke-width: 1.2; fill: none; }
 .cam .sc-carton .sc-tear { stroke: #C48B8B; stroke-width: 1.4; fill: none; }
@@ -1058,7 +1069,10 @@ body.rec .rec-brand { display: inline-flex; }
 .cam .bbox-ok text { fill: #6EE7A0; }
 .cam .bbox-warn rect { stroke: #FBBF24; stroke-dasharray: 5 3; }
 .cam .bbox-warn text { fill: #FCD34D; }
-.cam .bbox-bad rect { stroke: #F87171; }
+/* #F87171 measured 2.48:1 where the stroke crosses a carton (#4A5C72), under
+   the 3:1 required for a graphic that carries meaning. #FCA5A5 is 3.61:1 there
+   and 8.74:1 over the scene background. */
+.cam .bbox-bad rect { stroke: #FCA5A5; }
 .cam .bbox-bad text { fill: #FCA5A5; }
 
 @media (prefers-reduced-motion: reduce) {
@@ -1084,7 +1098,12 @@ a.demo-card {
   flex-direction: column;
   gap: 10px;
   background: var(--navy-card);
-  border: 1px solid var(--border-dark);
+  /* Scoped, NOT --border-dark retuned: that token is shared with light
+     surfaces across the site. These are link cards, and the statement claims
+     3:1 on link-card boundaries. --border-dark reaches only 2.12:1 against the
+     page background here, and the card fill is 1.26:1, so neither carried it.
+     #5A7BA6 is 3.79:1 against the page. */
+  border: 1px solid #5A7BA6;
   border-radius: var(--radius-card);
   padding: 24px 22px;
   text-decoration: none;

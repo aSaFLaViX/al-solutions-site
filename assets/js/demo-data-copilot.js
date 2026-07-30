@@ -10,12 +10,12 @@
     const root = $('#app-root');
     root.innerHTML = `
       <div class="panel schema-strip">
-        <div class="fields-head"><h4>${S.schemaTitle}</h4><span class="pill pill-grey">${S.readOnly}</span></div>
+        <div class="fields-head"><h3>${S.schemaTitle}</h3><span class="pill pill-grey">${S.readOnly}</span></div>
         <ul class="schema" id="schema"></ul>
         <p class="corpus-meta">${S.schemaMeta}</p>
       </div>
       <div class="panel dc-main">
-        <h4>${S.chatTitle}</h4>
+        <h3>${S.chatTitle}</h3>
         <div class="dc-log" id="dc-log"></div>
         <div class="chat-input">
           <input type="text" id="q-input" disabled placeholder="${S.inputPlaceholder}" aria-label="${S.inputLabel}">

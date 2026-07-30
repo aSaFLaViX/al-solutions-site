@@ -11,7 +11,7 @@
     root.innerHTML = `
       <div class="rag-layout two-col">
         <div class="panel rag-chat">
-          <h4>${S.chatTitle}</h4>
+          <h3>${S.chatTitle}</h3>
           <div class="chat-log" id="chat"></div>
           <div class="chat-input">
             <input type="text" id="q-input" disabled placeholder="${S.inputPlaceholder}" aria-label="${S.inputLabel}">
@@ -21,12 +21,12 @@
         <div class="rag-side">
          <div class="rag-sticky">
           <div class="panel">
-            <h4>${S.corpusTitle}</h4>
+            <h3>${S.corpusTitle}</h3>
             <ul class="corpus" id="corpus"></ul>
             <p class="corpus-meta">${S.corpusMeta}</p>
           </div>
           <div class="panel mt-12 hidden" id="ret-panel">
-            <h4>${S.retrievedTitle}</h4>
+            <h3>${S.retrievedTitle}</h3>
             <div id="ret-list" class="ret-list"></div>
           </div>
          </div>

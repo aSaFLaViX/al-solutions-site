@@ -96,12 +96,12 @@
         </div>
         <div class="extract-side">
           <div class="panel">
-            <h4>${S.pipeline}</h4>
+            <h3>${S.pipeline}</h3>
             <div class="pipe" id="pipe"></div>
           </div>
           <div class="panel mt-12">
             <div class="fields-head">
-              <h4>${S.fields}</h4>
+              <h3>${S.fields}</h3>
               <span class="pill pill-grey" id="field-count"></span>
             </div>
             <div id="fields"></div>
